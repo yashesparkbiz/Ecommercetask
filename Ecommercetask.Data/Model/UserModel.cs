@@ -5,7 +5,6 @@ namespace Ecommercetask.Data.Model
 {
     public class UserModel : IdentityUser<int>
     {
-
         public int Age { get; set; }
         public string Gender { get; set; } = string.Empty;
     }

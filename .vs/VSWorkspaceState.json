@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Ecommercetask",
+    "\\Ecommercetask.Core",
+    "\\Ecommercetask.Core\\Handlers",
+    "\\Ecommercetask.Core\\Handlers\\UsersHandler",
+    "\\Ecommercetask.Core\\Handlers\\UsersHandler\\Command",
+    "\\Ecommercetask.Core\\Handlers\\UsersHandler\\Command\\AddUsers",
+    "\\Ecommercetask.Data",
+    "\\Ecommercetask.Data\\Model"
   ],
-  "SelectedNode": "\\C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1",
+  "SelectedNode": "\\Ecommercetask.Data\\Model",
   "PreviewInSolutionExplorer": false
 }

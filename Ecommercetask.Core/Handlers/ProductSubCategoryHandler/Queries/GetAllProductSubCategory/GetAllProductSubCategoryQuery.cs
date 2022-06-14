@@ -1,6 +1,4 @@
-﻿
-
-using Ecommercetask.Data.Data;
+﻿using Ecommercetask.Data.Data;
 using Ecommercetask.Data.Model;
 using MediatR;
 using Microsoft.EntityFrameworkCore;

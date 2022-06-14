@@ -14,7 +14,7 @@ namespace Ecommercetask.Data.Data
         public virtual int Product_Id { get; set; }
 
         [ForeignKey("Product_Id")]
-        public virtual Product Product { get; set; } = new Product() { };
+        public virtual Product Product { get; set; } 
 
         [Column("quantity", TypeName = "int")]
         public int Quantity { get; set; }
@@ -24,7 +24,7 @@ namespace Ecommercetask.Data.Data
         public virtual int Order_Id { get; set; }
 
         [ForeignKey("Order_Id")]
-        public virtual Order Order { get; set; } = new Order() { };
+        public virtual Order Order { get; set; } 
 
         [Column("status", TypeName = "varchar(50)")]
         public string Status { get; set; } = string.Empty;
@@ -34,7 +34,7 @@ namespace Ecommercetask.Data.Data
         public virtual int Discount_Id { get; set; }
 
         [ForeignKey("Discount_Id")]
-        public virtual Discount Discount { get; set; } = new Discount() { };
+        public virtual Discount Discount { get; set; } 
 
         [Column("created_at", TypeName = "datetime")]
         public DateTime Created_At { get; set; } = DateTime.Now;

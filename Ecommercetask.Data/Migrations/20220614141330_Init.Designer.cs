@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommercetask.Data.Migrations
 {
     [DbContext(typeof(EcommerceSiteContext))]
-    [Migration("20220610101435_Init")]
+    [Migration("20220614141330_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -67,6 +67,9 @@ namespace Ecommercetask.Data.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("street");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("User_Id")
                         .HasColumnType("int")
                         .HasColumnName("user_id");
@@ -74,6 +77,8 @@ namespace Ecommercetask.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("Order_Details_Id");
+
+                    b.HasIndex("UserId");
 
                     b.HasIndex("User_Id");
 
@@ -676,8 +681,12 @@ namespace Ecommercetask.Data.Migrations
                         .WithMany("Address")
                         .HasForeignKey("Order_Details_Id");
 
-                    b.HasOne("Ecommercetask.Data.Data.User", "User")
+                    b.HasOne("Ecommercetask.Data.Data.User", null)
                         .WithMany("Address")
+                        .HasForeignKey("UserId");
+
+                    b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
+                        .WithMany()
                         .HasForeignKey("User_Id");
 
                     b.Navigation("Order_Details");
@@ -698,7 +707,7 @@ namespace Ecommercetask.Data.Migrations
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Order", b =>
                 {
-                    b.HasOne("Ecommercetask.Data.Data.User", "User")
+                    b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -722,7 +731,7 @@ namespace Ecommercetask.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Ecommercetask.Data.Data.Product", "Product")
-                        .WithMany()
+                        .WithMany("Order_Details")
                         .HasForeignKey("Product_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -753,7 +762,7 @@ namespace Ecommercetask.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommercetask.Data.Data.User", "User")
+                    b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -783,7 +792,7 @@ namespace Ecommercetask.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Ecommercetask.Data.Data.User", "User")
+                    b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -853,6 +862,8 @@ namespace Ecommercetask.Data.Migrations
             modelBuilder.Entity("Ecommercetask.Data.Data.Product", b =>
                 {
                     b.Navigation("Discount");
+
+                    b.Navigation("Order_Details");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_category", b =>

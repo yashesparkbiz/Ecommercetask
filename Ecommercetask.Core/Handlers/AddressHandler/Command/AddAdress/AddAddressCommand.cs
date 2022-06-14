@@ -34,7 +34,6 @@ namespace Ecommercetask.Core.Handlers.AddressHandler.Command.AddAdress
                 User_Id = request.In.User_Id,
                 Order_Details_Id = request.In.Order_Details_Id,
             };
-
             await _db.Address.AddAsync(address);
             await _db.SaveChangesAsync();
             return address.Id;

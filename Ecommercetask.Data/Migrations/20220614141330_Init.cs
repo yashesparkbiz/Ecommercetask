@@ -132,29 +132,6 @@ namespace Ecommercetask.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Order",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    total_amount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
-                    total_discount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
-                    user_id = table.Column<int>(type: "int", nullable: false),
-                    created_at = table.Column<DateTime>(type: "datetime", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "datetime", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Order", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Order_User_user_id",
-                        column: x => x.user_id,
-                        principalTable: "User",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
@@ -240,6 +217,29 @@ namespace Ecommercetask.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    total_amount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
+                    total_discount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
+                    user_id = table.Column<int>(type: "int", nullable: false),
+                    created_at = table.Column<DateTime>(type: "datetime", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "datetime", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Order_Users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Product",
                 columns: table => new
                 {
@@ -315,10 +315,10 @@ namespace Ecommercetask.Data.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Product_cart_User_user_id",
+                        name: "FK_Product_cart_Users_user_id",
                         column: x => x.user_id,
-                        principalTable: "User",
-                        principalColumn: "id",
+                        principalTable: "Users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -343,10 +343,10 @@ namespace Ecommercetask.Data.Migrations
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Product_wishlist_User_user_id",
+                        name: "FK_Product_wishlist_Users_user_id",
                         column: x => x.user_id,
-                        principalTable: "User",
-                        principalColumn: "id",
+                        principalTable: "Users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -400,7 +400,8 @@ namespace Ecommercetask.Data.Migrations
                     pincode = table.Column<string>(type: "varchar(20)", nullable: false),
                     address_type = table.Column<string>(type: "varchar(20)", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: true),
-                    order_details_id = table.Column<int>(type: "int", nullable: true)
+                    order_details_id = table.Column<int>(type: "int", nullable: true),
+                    UserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -411,10 +412,15 @@ namespace Ecommercetask.Data.Migrations
                         principalTable: "Order_Details",
                         principalColumn: "id");
                     table.ForeignKey(
-                        name: "FK_Address_User_user_id",
-                        column: x => x.user_id,
+                        name: "FK_Address_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
                         principalColumn: "id");
+                    table.ForeignKey(
+                        name: "FK_Address_Users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "Users",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -426,6 +432,11 @@ namespace Ecommercetask.Data.Migrations
                 name: "IX_Address_user_id",
                 table: "Address",
                 column: "user_id");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Address_UserId",
+                table: "Address",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -552,10 +563,10 @@ namespace Ecommercetask.Data.Migrations
                 name: "Order_Details");
 
             migrationBuilder.DropTable(
-                name: "AspNetRoles");
+                name: "User");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "Discount");
@@ -567,7 +578,7 @@ namespace Ecommercetask.Data.Migrations
                 name: "Product");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Product_subcategory");

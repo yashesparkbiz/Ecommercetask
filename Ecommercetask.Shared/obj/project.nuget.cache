@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "HC7ZEoXFpW3e5T0wQGM5jc6B9D3oyEKM/fO1NUoN/v+oLRNcSLJiC8QGF6dcIAAfNzdXuM7YNmu6rndmT4TBQA==",
+  "dgSpecHash": "oKAdD3nODxYZu49ZksKAbYuQTbblFb62uO2ofG4SncC4FpO5YjimWnbbUOi2pSM9vnu3Dm0S9NidfZbAO7j5JQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

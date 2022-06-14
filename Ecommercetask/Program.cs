@@ -17,7 +17,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<EcommerceSiteContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("default"), x => x.MigrationsAssembly("Ecommercetask.Data")));
+//builder.Services.Configure<IdentityOptions>(options => options.SignIn.RequireConfirmedAccount = false);
 builder.Services.AddIdentity<UserModel, IdentityRole<int>>().AddEntityFrameworkStores<EcommerceSiteContext>().AddDefaultTokenProviders();
+
+
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

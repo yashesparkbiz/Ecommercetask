@@ -2,43 +2,40 @@
 using Ecommercetask.Data.Model;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
 {
     public class AddUsersCommand : IRequest<IdentityResult>
     {
-        public AddUsersCommand(UserModel @in, UserManager<UserModel> userManager)
+        public AddUsersCommand(UsersModel @in)
         {
             In = @in;
-            _userManager = userManager;
         }
-        public UserModel In { get; }
-        public readonly UserManager<UserModel> _userManager;
+        public UsersModel In { get; }
+        
     }
 
     public class AddUsersCommandHandler : IRequestHandler<AddUsersCommand, IdentityResult>
     {
-        private readonly EcommerceSiteContext _db = null;
+        private readonly UserManager<UserModel> _userManager;
 
-        public AddUsersCommandHandler(EcommerceSiteContext db)
+        public AddUsersCommandHandler(UserManager<UserModel> userManager)
         {
-            _db = db;
+            _userManager = userManager;
         }
         public async Task<IdentityResult> Handle(AddUsersCommand request, CancellationToken cancellationToken)
         {
             var user = new UserModel()
             {
+                UserName = request.In.UserName,
                 Age = request.In.Age,
                 Gender = request.In.Gender,
+                Email = request.In.Email,
+                PhoneNumber = request.In.PhoneNumber
             };
 
-            var result = await request._userManager.CreateAsync(user); 
-            await _db.SaveChangesAsync();
+            var result = await _userManager.CreateAsync(user, request.In.Password); 
+            //await _db.SaveChangesAsync();
             return result  ;
         }
     }

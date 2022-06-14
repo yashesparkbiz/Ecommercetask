@@ -1,4 +1,5 @@
 ﻿
+using Ecommercetask.Data.Model;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -17,12 +18,12 @@ namespace Ecommercetask.Data.Data
         [ForeignKey("Product_Id")]
         public virtual Product Product { get; set; }
 
-        [Display(Name = "User")]
+        [Display(Name = "UserModel")]
         [Column("user_id", TypeName = "int")]
         public virtual int User_Id { get; set; }
 
         [ForeignKey("User_Id")]
-        public virtual User User { get; set; }
+        public virtual UserModel User { get; set; }
 
         [Column("created_at", TypeName = "datetime")]
         public DateTime Created_At { get; set; }

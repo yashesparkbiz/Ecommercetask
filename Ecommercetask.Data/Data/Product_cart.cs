@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Ecommercetask.Data.Model;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ecommercetask.Data.Data
@@ -22,12 +23,12 @@ namespace Ecommercetask.Data.Data
         [Column("price", TypeName = "decimal(6,2)")]
         public decimal Price { get; set; }
 
-        [Display(Name = "User")]
+        [Display(Name = "UserModel")]
         [Column("user_id", TypeName = "int")]
         public virtual int User_Id { get; set; }
 
         [ForeignKey("User_Id")]
-        public virtual User User { get; set; } 
+        public virtual UserModel User { get; set; } 
 
         [Column("is_active", TypeName = "bit")] 
         public bool Is_Active { get; set; }

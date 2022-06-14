@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Ecommercetask.Data.Model;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
@@ -28,12 +29,12 @@ namespace Ecommercetask.Data.Data
         [Column("address_type", TypeName = "varchar(20)")]
         public string Address_Type { get; set; } = string.Empty;
 
-        [Display(Name = "User")]
+        [Display(Name = "UserModel")]
         [Column("user_id", TypeName = "int")]
         public virtual int? User_Id { get; set; }
 
         [ForeignKey("User_Id")]
-        public virtual User User { get; set; }
+        public virtual UserModel User { get; set; }
 
         [Display(Name = "Order_Details")]
         [Column("order_details_id", TypeName = "int")]
