@@ -22,3 +22,15 @@ C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask.Shared\obj\Debu
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask.Shared\obj\Debug\net6.0\refint\Ecommercetask.Shared.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.pdb
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask.Shared\obj\Debug\net6.0\ref\Ecommercetask.Shared.dll
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\bin\Debug\net6.0\Ecommercetask.Shared.deps.json
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\bin\Debug\net6.0\Ecommercetask.Shared.dll
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\bin\Debug\net6.0\Ecommercetask.Shared.pdb
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.csproj.AssemblyReference.cache
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.GeneratedMSBuildEditorConfig.editorconfig
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.AssemblyInfoInputs.cache
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.AssemblyInfo.cs
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.csproj.CoreCompileInputs.cache
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.dll
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\refint\Ecommercetask.Shared.dll
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\Ecommercetask.Shared.pdb
+F:\Esparkbiz\Ecommercetask\Ecommercetask.Shared\obj\Debug\net6.0\ref\Ecommercetask.Shared.dll

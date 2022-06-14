@@ -1,38 +1,41 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {}
+    "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
+    "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
+        "projectUniqueName": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
         "projectName": "Ecommercetask.Core",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
-        "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\obj\\",
+        "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
+        "packagesPath": "C:\\Users\\yash\\.nuget\\packages\\",
+        "outputPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
+              "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
+                "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
               },
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
+              "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+                "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
               }
             }
           }
@@ -75,36 +78,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
+    "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
+        "projectUniqueName": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
         "projectName": "Ecommercetask.Data",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
-        "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\obj\\",
+        "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
+        "packagesPath": "C:\\Users\\yash\\.nuget\\packages\\",
+        "outputPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
+              "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+                "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
               }
             }
           }
@@ -157,29 +163,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+    "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+        "projectUniqueName": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
         "projectName": "Ecommercetask.Shared",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
-        "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\obj\\",
+        "projectPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+        "packagesPath": "C:\\Users\\yash\\.nuget\\packages\\",
+        "outputPath": "F:\\Esparkbiz\\Ecommercetask\\Ecommercetask.Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\yash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "http://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -217,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

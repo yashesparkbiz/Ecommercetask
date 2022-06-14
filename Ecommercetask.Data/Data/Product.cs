@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ecommercetask.Data.Data
@@ -49,3 +47,4 @@ namespace Ecommercetask.Data.Data
         public virtual ICollection<Order_Details> Order_Details { get; set; }
     }
 }
+

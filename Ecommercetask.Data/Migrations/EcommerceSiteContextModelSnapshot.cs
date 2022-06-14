@@ -65,9 +65,6 @@ namespace Ecommercetask.Data.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("street");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<int?>("User_Id")
                         .HasColumnType("int")
                         .HasColumnName("user_id");
@@ -75,8 +72,6 @@ namespace Ecommercetask.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("Order_Details_Id");
-
-                    b.HasIndex("UserId");
 
                     b.HasIndex("User_Id");
 
@@ -679,10 +674,6 @@ namespace Ecommercetask.Data.Migrations
                         .WithMany("Address")
                         .HasForeignKey("Order_Details_Id");
 
-                    b.HasOne("Ecommercetask.Data.Data.User", null)
-                        .WithMany("Address")
-                        .HasForeignKey("UserId");
-
                     b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("User_Id");
@@ -872,11 +863,6 @@ namespace Ecommercetask.Data.Migrations
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_subcategory", b =>
                 {
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Ecommercetask.Data.Data.User", b =>
-                {
-                    b.Navigation("Address");
                 });
 #pragma warning restore 612, 618
         }

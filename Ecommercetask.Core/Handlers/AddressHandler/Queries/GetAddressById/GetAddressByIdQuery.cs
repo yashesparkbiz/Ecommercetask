@@ -21,7 +21,7 @@ namespace Ecommercetask.Core.Handlers.AddressHandler.Queries.GetAddressById
 
         public async Task<AddressModel> Handle(GetAddressByIdQuery request, CancellationToken cancellationToken)
         {
-            var addressbyid = await _db.Address.Where(d => d.Id == request.Id).FirstOrDefaultAsync();
+            var addressbyid = await _db.Address.Where(d => d.Id == request.Id   ).FirstOrDefaultAsync();
             var address = new AddressModel()
             {
                 Id = addressbyid.Id,

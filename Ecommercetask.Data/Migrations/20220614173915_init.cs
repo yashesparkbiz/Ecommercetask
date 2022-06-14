@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ecommercetask.Data.Migrations
 {
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -400,8 +400,7 @@ namespace Ecommercetask.Data.Migrations
                     pincode = table.Column<string>(type: "varchar(20)", nullable: false),
                     address_type = table.Column<string>(type: "varchar(20)", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: true),
-                    order_details_id = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    order_details_id = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -410,11 +409,6 @@ namespace Ecommercetask.Data.Migrations
                         name: "FK_Address_Order_Details_order_details_id",
                         column: x => x.order_details_id,
                         principalTable: "Order_Details",
-                        principalColumn: "id");
-                    table.ForeignKey(
-                        name: "FK_Address_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
                         principalColumn: "id");
                     table.ForeignKey(
                         name: "FK_Address_Users_user_id",
@@ -432,11 +426,6 @@ namespace Ecommercetask.Data.Migrations
                 name: "IX_Address_user_id",
                 table: "Address",
                 column: "user_id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Address_UserId",
-                table: "Address",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -560,10 +549,10 @@ namespace Ecommercetask.Data.Migrations
                 name: "Product_wishlist");
 
             migrationBuilder.DropTable(
-                name: "Order_Details");
+                name: "User");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Order_Details");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
