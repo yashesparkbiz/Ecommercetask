@@ -12,5 +12,6 @@ namespace Ecommercetask.Data.Model
         public int Quantity { get; set; }
         public string Image { get; set; } = string.Empty;
         public bool Is_Active { get; set; } = true;
+        public int User_Id { get; set; }
     }
 }

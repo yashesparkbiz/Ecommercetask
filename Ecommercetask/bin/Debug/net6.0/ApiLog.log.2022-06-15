@@ -1,0 +1,550 @@
+ 2022-06-15 00:57:13,600
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 00:57:13,606
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 00:57:13,606
+ - MESSAGE: Content root path: F:\Esparkbiz\Ecommercetask\Ecommercetask\
+  2022-06-15 10:12:42,233
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 10:12:42,240
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 10:12:42,240
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 11:18:57,934
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 11:19:46,300
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 11:19:46,515
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 11:19:46,538
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 11:19:46,541
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 11:19:46,541
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 11:19:46,553
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 11:19:46,568
+ - MESSAGE: Applying migration '20220614173915_init'.
+  2022-06-15 11:19:46,670
+ - MESSAGE: Failed executing DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+  2022-06-15 11:19:46,787
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 11:19:46,795
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 11:19:46,795
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 11:21:32,398
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 11:21:32,845
+ - MESSAGE: Executed DbCommand (225ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+CREATE DATABASE [EcommercetaskDemo];
+  2022-06-15 11:21:32,900
+ - MESSAGE: Executed DbCommand (53ms) [Parameters=[], CommandType='Text', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [EcommercetaskDemo] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+  2022-06-15 11:21:32,914
+ - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 11:21:32,986
+ - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);
+  2022-06-15 11:21:32,987
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 11:21:33,002
+ - MESSAGE: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 11:21:33,007
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 11:21:33,020
+ - MESSAGE: Applying migration '20220614173915_init'.
+  2022-06-15 11:21:33,077
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+  2022-06-15 11:21:33,079
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Product_category] (
+    [id] int NOT NULL IDENTITY,
+    [name] varchar(255) NOT NULL,
+    [is_active] bit NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Product_category] PRIMARY KEY ([id])
+);
+  2022-06-15 11:21:33,080
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [User] (
+    [id] int NOT NULL IDENTITY,
+    [user_name] varchar(255) NOT NULL,
+    [email_id] varchar(255) NOT NULL,
+    [phoneno] varchar(10) NOT NULL,
+    [age] int NOT NULL,
+    [gender] varchar(10) NOT NULL,
+    [role] varchar(100) NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_User] PRIMARY KEY ([id])
+);
+  2022-06-15 11:21:33,082
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [Age] int NOT NULL,
+    [Gender] nvarchar(max) NOT NULL,
+    [UserName] nvarchar(256) NULL,
+    [NormalizedUserName] nvarchar(256) NULL,
+    [Email] nvarchar(256) NULL,
+    [NormalizedEmail] nvarchar(256) NULL,
+    [EmailConfirmed] bit NOT NULL,
+    [PasswordHash] nvarchar(max) NULL,
+    [SecurityStamp] nvarchar(max) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    [PhoneNumber] nvarchar(max) NULL,
+    [PhoneNumberConfirmed] bit NOT NULL,
+    [TwoFactorEnabled] bit NOT NULL,
+    [LockoutEnd] datetimeoffset NULL,
+    [LockoutEnabled] bit NOT NULL,
+    [AccessFailedCount] int NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+  2022-06-15 11:21:33,083
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetRoleClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [RoleId] int NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,104
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Product_subcategory] (
+    [id] int NOT NULL IDENTITY,
+    [name] varchar(255) NOT NULL,
+    [category_id] int NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Product_subcategory] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Product_subcategory_Product_category_category_id] FOREIGN KEY ([category_id]) REFERENCES [Product_category] ([id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,106
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserClaims] (
+    [Id] int NOT NULL IDENTITY,
+    [UserId] int NOT NULL,
+    [ClaimType] nvarchar(max) NULL,
+    [ClaimValue] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AspNetUserClaims_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,108
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserLogins] (
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [ProviderKey] nvarchar(450) NOT NULL,
+    [ProviderDisplayName] nvarchar(max) NULL,
+    [UserId] int NOT NULL,
+    CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY ([LoginProvider], [ProviderKey]),
+    CONSTRAINT [FK_AspNetUserLogins_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,221
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserRoles] (
+    [UserId] int NOT NULL,
+    [RoleId] int NOT NULL,
+    CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY ([UserId], [RoleId]),
+    CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY ([RoleId]) REFERENCES [AspNetRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AspNetUserRoles_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,223
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [AspNetUserTokens] (
+    [UserId] int NOT NULL,
+    [LoginProvider] nvarchar(450) NOT NULL,
+    [Name] nvarchar(450) NOT NULL,
+    [Value] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY ([UserId], [LoginProvider], [Name]),
+    CONSTRAINT [FK_AspNetUserTokens_Users_UserId] FOREIGN KEY ([UserId]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,224
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Order] (
+    [id] int NOT NULL IDENTITY,
+    [total_amount] decimal(6,2) NOT NULL,
+    [total_discount] decimal(6,2) NOT NULL,
+    [user_id] int NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Order] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Order_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,226
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Product] (
+    [id] int NOT NULL IDENTITY,
+    [product_name] varchar(255) NOT NULL,
+    [description] varchar(255) NOT NULL,
+    [brand] varchar(100) NOT NULL,
+    [price] decimal(10,3) NOT NULL,
+    [product_subcategory_id] int NOT NULL,
+    [quantity] int NOT NULL,
+    [image] varchar(100) NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    [is_active] bit NOT NULL,
+    CONSTRAINT [PK_Product] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Product_Product_subcategory_product_subcategory_id] FOREIGN KEY ([product_subcategory_id]) REFERENCES [Product_subcategory] ([id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,336
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Discount] (
+    [id] int NOT NULL IDENTITY,
+    [product_id] int NOT NULL,
+    [type] varchar(100) NOT NULL,
+    [value] varchar(100) NOT NULL,
+    [is_active] bit NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Discount] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Discount_Product_product_id] FOREIGN KEY ([product_id]) REFERENCES [Product] ([id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,338
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Product_cart] (
+    [id] int NOT NULL IDENTITY,
+    [product_id] int NOT NULL,
+    [quantity] int NOT NULL,
+    [price] decimal(6,2) NOT NULL,
+    [user_id] int NOT NULL,
+    [is_active] bit NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Product_cart] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Product_cart_Product_product_id] FOREIGN KEY ([product_id]) REFERENCES [Product] ([id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Product_cart_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,423
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Product_wishlist] (
+    [id] int NOT NULL IDENTITY,
+    [product_id] int NOT NULL,
+    [user_id] int NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Product_wishlist] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Product_wishlist_Product_product_id] FOREIGN KEY ([product_id]) REFERENCES [Product] ([id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Product_wishlist_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]) ON DELETE CASCADE
+);
+  2022-06-15 11:21:33,425
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Order_Details] (
+    [id] int NOT NULL IDENTITY,
+    [product_id] int NOT NULL,
+    [quantity] int NOT NULL,
+    [order_id] int NOT NULL,
+    [status] varchar(50) NOT NULL,
+    [discount_id] int NOT NULL,
+    [created_at] datetime NOT NULL,
+    [updated_at] datetime NOT NULL,
+    CONSTRAINT [PK_Order_Details] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Order_Details_Discount_discount_id] FOREIGN KEY ([discount_id]) REFERENCES [Discount] ([id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Order_Details_Order_order_id] FOREIGN KEY ([order_id]) REFERENCES [Order] ([id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Order_Details_Product_product_id] FOREIGN KEY ([product_id]) REFERENCES [Product] ([id])
+);
+  2022-06-15 11:21:33,427
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE [Address] (
+    [id] int NOT NULL IDENTITY,
+    [house] varchar(100) NOT NULL,
+    [street] varchar(100) NOT NULL,
+    [city] varchar(100) NOT NULL,
+    [country] varchar(100) NOT NULL,
+    [pincode] varchar(20) NOT NULL,
+    [address_type] varchar(20) NOT NULL,
+    [user_id] int NULL,
+    [order_details_id] int NULL,
+    CONSTRAINT [PK_Address] PRIMARY KEY ([id]),
+    CONSTRAINT [FK_Address_Order_Details_order_details_id] FOREIGN KEY ([order_details_id]) REFERENCES [Order_Details] ([id]),
+    CONSTRAINT [FK_Address_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id])
+);
+  2022-06-15 11:21:33,537
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Address_order_details_id] ON [Address] ([order_details_id]);
+  2022-06-15 11:21:33,538
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Address_user_id] ON [Address] ([user_id]);
+  2022-06-15 11:21:33,538
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetRoleClaims_RoleId] ON [AspNetRoleClaims] ([RoleId]);
+  2022-06-15 11:21:33,540
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [RoleNameIndex] ON [AspNetRoles] ([NormalizedName]) WHERE [NormalizedName] IS NOT NULL;
+  2022-06-15 11:21:33,541
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserClaims_UserId] ON [AspNetUserClaims] ([UserId]);
+  2022-06-15 11:21:33,542
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserLogins_UserId] ON [AspNetUserLogins] ([UserId]);
+  2022-06-15 11:21:33,542
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_AspNetUserRoles_RoleId] ON [AspNetUserRoles] ([RoleId]);
+  2022-06-15 11:21:33,543
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Discount_product_id] ON [Discount] ([product_id]);
+  2022-06-15 11:21:33,624
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Order_user_id] ON [Order] ([user_id]);
+  2022-06-15 11:21:33,625
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Order_Details_discount_id] ON [Order_Details] ([discount_id]);
+  2022-06-15 11:21:33,626
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Order_Details_order_id] ON [Order_Details] ([order_id]);
+  2022-06-15 11:21:33,626
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Order_Details_product_id] ON [Order_Details] ([product_id]);
+  2022-06-15 11:21:33,627
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_product_subcategory_id] ON [Product] ([product_subcategory_id]);
+  2022-06-15 11:21:33,627
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_cart_product_id] ON [Product_cart] ([product_id]);
+  2022-06-15 11:21:33,628
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_cart_user_id] ON [Product_cart] ([user_id]);
+  2022-06-15 11:21:33,628
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_subcategory_category_id] ON [Product_subcategory] ([category_id]);
+  2022-06-15 11:21:33,629
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_wishlist_product_id] ON [Product_wishlist] ([product_id]);
+  2022-06-15 11:21:33,629
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_wishlist_user_id] ON [Product_wishlist] ([user_id]);
+  2022-06-15 11:21:33,720
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [EmailIndex] ON [Users] ([NormalizedEmail]);
+  2022-06-15 11:21:33,720
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE UNIQUE INDEX [UserNameIndex] ON [Users] ([NormalizedUserName]) WHERE [NormalizedUserName] IS NOT NULL;
+  2022-06-15 11:21:33,722
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220614173915_init', N'6.0.5');
+  2022-06-15 15:20:53,483
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 15:20:53,490
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 15:20:53,490
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 15:26:19,577
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:26:44,248
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:26:44,408
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:26:44,429
+ - MESSAGE: Executed DbCommand (12ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:26:44,432
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:26:44,432
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:26:44,442
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 15:26:44,455
+ - MESSAGE: Applying migration '20220615095619_adduseridinProducttable'.
+  2022-06-15 15:26:44,511
+ - MESSAGE: Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD [user_id] int NOT NULL DEFAULT 0;
+  2022-06-15 15:26:44,513
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_user_id] ON [Product] ([user_id]);
+  2022-06-15 15:26:44,524
+ - MESSAGE: Failed executing DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD CONSTRAINT [FK_Product_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]) ON DELETE CASCADE;
+  2022-06-15 15:27:49,363
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:27:49,643
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:27:49,662
+ - MESSAGE: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:27:49,668
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 15:28:26,728
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:28:55,770
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:28:55,935
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:28:55,958
+ - MESSAGE: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:28:55,960
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:28:55,960
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:28:55,969
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 15:28:55,982
+ - MESSAGE: Applying migration '20220615095826_adduseridinProducttable'.
+  2022-06-15 15:28:56,028
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD [user_id] int NOT NULL DEFAULT 0;
+  2022-06-15 15:28:56,029
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_user_id] ON [Product] ([user_id]);
+  2022-06-15 15:28:56,037
+ - MESSAGE: Failed executing DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD CONSTRAINT [FK_Product_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]) ON DELETE CASCADE;
+  2022-06-15 15:34:31,709
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-15 15:34:31,872
+ - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:34:31,892
+ - MESSAGE: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:34:31,894
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+  2022-06-15 15:34:31,894
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+  2022-06-15 15:34:31,903
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+  2022-06-15 15:34:31,915
+ - MESSAGE: Applying migration '20220615095826_adduseridinProducttable'.
+  2022-06-15 15:34:31,961
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD [user_id] int NOT NULL DEFAULT 0;
+  2022-06-15 15:34:31,962
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE INDEX [IX_Product_user_id] ON [Product] ([user_id]);
+  2022-06-15 15:34:31,963
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Product] ADD CONSTRAINT [FK_Product_Users_user_id] FOREIGN KEY ([user_id]) REFERENCES [Users] ([Id]);
+  2022-06-15 15:34:31,964
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20220615095826_adduseridinProducttable', N'6.0.5');
+  2022-06-15 19:18:50,775
+ - MESSAGE: Application startup exception
+ System.InvalidOperationException: The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the CORS policy by listing individual origins if credentials needs to be supported.
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder.Build()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions.AddPolicy(String name, Action`1 configurePolicy)
+   at Program.<>c.<<Main>$>b__0_1(CorsOptions options) in C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\Program.cs:line 25
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsService..ctor(IOptions`1 options, ILoggerFactory loggerFactory)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+ 2022-06-15 19:19:24,953
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 19:19:24,959
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 19:19:24,959
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 19:34:25,760
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 19:34:25,765
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 19:34:25,765
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 19:39:48,903
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-15 19:39:48,907
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-15 19:39:48,909
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 19:39:48,909
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 19:39:48,909
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 20:00:53,688
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-15 20:00:53,722
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-15 20:00:53,726
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 20:00:53,727
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 20:00:53,728
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+  2022-06-15 20:05:09,046
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-15 20:05:09,051
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-15 20:05:09,053
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-15 20:05:09,053
+ - MESSAGE: Hosting environment: Development
+  2022-06-15 20:05:09,053
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask1\Ecommercetask\
+ 

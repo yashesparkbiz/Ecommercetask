@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Ecommercetask.Data.Model;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ecommercetask.Data.Data
@@ -33,6 +34,13 @@ namespace Ecommercetask.Data.Data
 
         [Column("image", TypeName = "varchar(100)")]
         public string Image { get; set; } = string.Empty;
+
+        [Display(Name = "UserModel")]
+        [Column("user_id", TypeName = "int")]
+        public int User_Id { get; set; }
+
+        [ForeignKey("User_Id")]
+        public virtual UserModel Users { get; set; }
 
         [Column("created_at", TypeName = "datetime")]
         public DateTime Created_At { get; set; } = DateTime.Now;

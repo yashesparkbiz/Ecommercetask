@@ -3,6 +3,7 @@ using Ecommercetask.Core.Handlers.ProductHandler.Command.DeleteProduct;
 using Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct;
 using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetAllProduct;
 using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductById;
+using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductsBySubCategoryId;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
@@ -30,6 +31,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetById(int Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetProductByIdQuery { Id = Id }, ct));
+        }
+
+        [HttpGet("get-products-bysubcategoryid/{Product_Subcategory_Id}")]
+        public async Task<IActionResult> GetProductsBySubcategoryId(int Product_Subcategory_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetProductsBySubCategoryIdQuery { Product_Subcategory_Id = Product_Subcategory_Id }, ct));
         }
 
         [HttpDelete("delete-product/{Id}")]

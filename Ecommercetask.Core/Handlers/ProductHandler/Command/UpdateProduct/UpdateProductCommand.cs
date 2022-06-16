@@ -33,6 +33,7 @@ namespace Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct
                 Quantity = request.productModel.Quantity,
                 Image = request.productModel.Image,
                 Is_Active = request.productModel.Is_Active,
+                User_Id = request.productModel.User_Id,
             };
             _db.Product.Update(product);
             await _db.SaveChangesAsync();

@@ -33,7 +33,7 @@ namespace Ecommercetask.Core.Handlers.ProductHandler.Command.AddProduct
                 Quantity = request.In.Quantity,
                 Image = request.In.Image,
                 Is_Active = request.In.Is_Active,
-                
+                User_Id = request.In.User_Id
             };
 
             await _db.Product.AddAsync(product);

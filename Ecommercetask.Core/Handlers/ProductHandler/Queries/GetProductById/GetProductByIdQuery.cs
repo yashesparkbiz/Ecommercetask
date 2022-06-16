@@ -39,6 +39,7 @@ namespace Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductById
                 Quantity = productbyid.Quantity,
                 Image = productbyid.Image,
                 Is_Active = productbyid.Is_Active,
+                User_Id = productbyid.User_Id,
             };
             return product;
         }

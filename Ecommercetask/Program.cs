@@ -20,7 +20,7 @@ builder.Services.AddDbContext<EcommerceSiteContext>(x => x.UseSqlServer(builder.
 //builder.Services.Configure<IdentityOptions>(options => options.SignIn.RequireConfirmedAccount = false);
 builder.Services.AddIdentity<UserModel, IdentityRole<int>>().AddEntityFrameworkStores<EcommerceSiteContext>().AddDefaultTokenProviders();
 
-
+builder.Services.AddCors();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.
@@ -30,6 +30,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
+app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

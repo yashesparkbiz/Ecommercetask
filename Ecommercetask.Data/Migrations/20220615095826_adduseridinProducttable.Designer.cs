@@ -4,6 +4,7 @@ using Ecommercetask.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommercetask.Data.Migrations
 {
     [DbContext(typeof(EcommerceSiteContext))]
-    partial class EcommerceSiteContextModelSnapshot : ModelSnapshot
+    [Migration("20220615095826_adduseridinProducttable")]
+    partial class adduseridinProducttable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

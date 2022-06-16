@@ -37,6 +37,7 @@ namespace Ecommercetask.Core.Handlers.ProductHandler.Queries.GetAllProduct
                         Quantity = p.Quantity,
                         Image = p.Image,
                         Is_Active = p.Is_Active,
+                        User_Id = p.User_Id,
                     });
                 }
             }

@@ -21,7 +21,7 @@ namespace Ecommercetask.Controllers
 
         [HttpPost("add-productcategory")]
         public async Task<IActionResult> AddProductCategory([FromBody] AddProductCategoryCommand command, CancellationToken ct)
-        {
+        {  
             return Ok(await _mediator.Send(command, ct));
         }
 
