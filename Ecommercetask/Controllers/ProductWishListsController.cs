@@ -6,10 +6,12 @@ using Ecommercetask.Core.Handlers.ProductWishlistHandler.Queries.GetProductWishl
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class ProductWishListsController : AppApiController
     {
         public ProductWishListsController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oKAdD3nODxYZu49ZksKAbYuQTbblFb62uO2ofG4SncC4FpO5YjimWnbbUOi2pSM9vnu3Dm0S9NidfZbAO7j5JQ==",
+  "dgSpecHash": "DuMXD/daE+4DhmjWKeH38us6+3nd629uDFwTMdUrGeEsomzSMhN8Mwh08cSp4L6+INPm3xnsMxfGO1jefpyl3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+  "projectFilePath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",

@@ -15,7 +15,16 @@ namespace Ecommercetask.Controllers
         [HttpPost("create-user")]
         public async Task<IActionResult> SignUp([FromBody] AddUsersCommand command, CancellationToken ct)
         {
-            return Ok(await _mediator.Send(command, ct));
+            if (command == null)
+                return BadRequest();
+            var result =await _mediator.Send(command, ct);
+            if (!result.Succeeded)
+            {
+                var errors = result.Errors.Select(e => e.Description);
+
+                return BadRequest(errors);
+            }
+            return Ok(result);
         }
 
         [HttpGet("get-all-user")]
@@ -27,7 +36,12 @@ namespace Ecommercetask.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(SignInUserCommand command, CancellationToken ct)
         {
-            return Ok(await _mediator.Send(command, ct));
+            var status = await _mediator.Send(command, ct);
+            if(status.Token == null)
+            {
+                return Unauthorized(status);
+            }
+            return Ok(status);
         }
 
         [HttpGet("logout")]

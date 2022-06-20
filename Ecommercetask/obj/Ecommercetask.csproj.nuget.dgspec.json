@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask\\Ecommercetask.csproj": {}
+    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Ecommercetask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
+    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
+        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
         "projectName": "Ecommercetask.Core",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
+        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
         "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\obj\\",
+        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
               },
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
               }
             }
           }
@@ -47,6 +47,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[10.0.1, )"
@@ -79,14 +83,14 @@
         }
       }
     },
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
+    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
+        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
         "projectName": "Ecommercetask.Data",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
+        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj",
         "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\obj\\",
+        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,8 +107,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
               }
             }
           }
@@ -161,14 +165,14 @@
         }
       }
     },
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
         "projectName": "Ecommercetask.Shared",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
         "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\obj\\",
+        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -221,14 +225,14 @@
         }
       }
     },
-    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask\\Ecommercetask.csproj": {
+    "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Ecommercetask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask\\Ecommercetask.csproj",
+        "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Ecommercetask.csproj",
         "projectName": "Ecommercetask",
-        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask\\Ecommercetask.csproj",
+        "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Ecommercetask.csproj",
         "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask\\obj\\",
+        "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -245,14 +249,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj"
               },
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Data\\Ecommercetask.Data.csproj"
               },
-              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
-                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
+              "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj": {
+                "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj"
               }
             }
           }
@@ -274,6 +278,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.6, )"
             },
             "Microsoft.AspNetCore.Diagnostics": {
               "target": "Package",

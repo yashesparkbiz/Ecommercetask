@@ -5,14 +5,16 @@ using Ecommercetask.Core.Handlers.ProductCategoryHandler.Queries.GetProductCateg
 using Ecommercetask.Core.Helper.ProductCategoryHelper.Queries.GetAllProductCategory;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class ProductCategoryController : AppApiController
     {
         public ProductCategoryController(ILogger<HomeController> logger, IMediator mediator) : base(logger, mediator) { }
-
+        [Authorized]
         [HttpGet("get-all-productcategory")]
         public async Task<IActionResult> GetAllProductCategory(CancellationToken ct)
         {

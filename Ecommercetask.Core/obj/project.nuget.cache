@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xx6WZdkQH6efKxmpsgSJBNQzyWQE5dVvYUte1xx0sUixEG56TcOoSLz5p/02RJrHty4P+XioWefIA6PypxqHgg==",
+  "dgSpecHash": "2FsgLAsQQzyFixFE7H7MUxg82C0LkU8oDNNAGpsHqCNYHvogCMSbsYE91FhJlAbm+HXRnuXkmYl8xhPdMDEDRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
+  "projectFilePath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Ecommercetask.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\R5\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
@@ -25,7 +26,7 @@
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.identity\\2.2.0\\microsoft.aspnetcore.identity.2.2.0.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.5\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.5.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
-    "C:\\Users\\R5\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\R5\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\R5\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",

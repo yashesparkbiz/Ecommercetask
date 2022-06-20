@@ -2,10 +2,12 @@
 using Ecommercetask.Core.Helper.CarsHelper.Queries.GetAllCars;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     [ApiController]
     [Route("[controller]")]
     public class HomeController : AppApiController

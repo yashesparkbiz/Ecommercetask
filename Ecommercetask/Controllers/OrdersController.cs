@@ -6,10 +6,12 @@ using Ecommercetask.Core.Handlers.OrdersHandler.Queries.GetOrdersById;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class OrdersController : AppApiController
     {
         public OrdersController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}

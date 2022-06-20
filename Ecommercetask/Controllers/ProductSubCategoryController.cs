@@ -7,10 +7,12 @@ using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetProductSu
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class ProductSubCategoryController : AppApiController
     {
         public ProductSubCategoryController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}

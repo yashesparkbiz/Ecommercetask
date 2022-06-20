@@ -5,10 +5,12 @@ using Ecommercetask.Core.Handlers.AddressHandler.Queries.GetAddressById;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class AddressController : AppApiController
     {
         public AddressController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}

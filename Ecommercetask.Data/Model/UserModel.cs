@@ -1,6 +1,5 @@
 ﻿using Ecommercetask.Data.Data;
 using Microsoft.AspNetCore.Identity;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Ecommercetask.Data.Model
 {
@@ -11,4 +10,4 @@ namespace Ecommercetask.Data.Model
 
         public virtual ICollection<Product> Product { get; set; }
     }
-}
+}               

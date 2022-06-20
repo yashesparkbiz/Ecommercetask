@@ -190,11 +190,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
       "projectName": "Ecommercetask.Shared",
-      "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
+      "projectPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\Ecommercetask.Shared.csproj",
       "packagesPath": "C:\\Users\\R5\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask1\\Ecommercetask.Shared\\obj\\",
+      "outputPath": "C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Shared\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\R5\\AppData\\Roaming\\NuGet\\NuGet.Config",

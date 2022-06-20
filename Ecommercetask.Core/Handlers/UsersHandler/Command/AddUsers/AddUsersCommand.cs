@@ -24,7 +24,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
             _userManager = userManager;
         }
         public async Task<IdentityResult> Handle(AddUsersCommand request, CancellationToken cancellationToken)
-        {
+        { 
             var user = new UserModel()
             {
                 UserName = request.In.UserName,

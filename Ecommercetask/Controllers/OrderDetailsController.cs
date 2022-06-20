@@ -6,10 +6,12 @@ using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetOrderDetailsByI
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class OrderDetailsController : AppApiController
     {
         public OrderDetailsController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator)

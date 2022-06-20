@@ -5,14 +5,15 @@ using Ecommercetask.Core.Handlers.ProductCartHandler.Queries.GetProductCartByUse
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
+    
     public class ProductCartController : AppApiController
     {
         public ProductCartController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}
-
         [HttpPost("add-product-cart")]
         public async Task<IActionResult> Add([FromBody] AddProductCartCommand command, CancellationToken ct)
         {
