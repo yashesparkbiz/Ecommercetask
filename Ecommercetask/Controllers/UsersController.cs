@@ -1,6 +1,7 @@
 ﻿using Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser;
 using Ecommercetask.Core.Handlers.UsersHandler.Queries.GetAllUsers;
+using Ecommercetask.Core.Handlers.UsersHandler.Queries.GetUserByEmail;
 using Ecommercetask.Core.Handlers.UsersHandler.Queries.LogOutUser;
 using Ecommercetask.Shared;
 using MediatR;
@@ -48,6 +49,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> Logout(CancellationToken ct)
         {
             return Ok(await _mediator.Send(new LogOutUserQuery(), ct));
+        }
+
+        [HttpGet("get-user-byemail/{email}")]
+        public async Task<IActionResult> GetUserByEmail(string email, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetUserByEmailQuery { Email = email}, ct));
         }
     }
 }

@@ -27,7 +27,7 @@ namespace Ecommercetask.Core.Handlers.ProductCartHandler.Command.AddProductCart
             {
                 Product_Id = request.In.Product_Id,
                 Quantity = request.In.Quantity,
-                Price = request.In.Price,
+                Price = Convert.ToDecimal(request.In.Price),
                 User_Id = request.In.User_Id,
                 Is_Active = request.In.Is_Active
             };

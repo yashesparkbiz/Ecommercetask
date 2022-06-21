@@ -14,6 +14,7 @@ namespace Ecommercetask.Controllers
     public class ProductCartController : AppApiController
     {
         public ProductCartController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}
+        [Authorize]
         [HttpPost("add-product-cart")]
         public async Task<IActionResult> Add([FromBody] AddProductCartCommand command, CancellationToken ct)
         {
