@@ -1,5 +1,4 @@
-﻿using Ecommercetask.Data.Data;
-using Ecommercetask.Data.Model;
+﻿using Ecommercetask.Data.Model;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 
@@ -18,10 +17,12 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
     public class AddUsersCommandHandler : IRequestHandler<AddUsersCommand, IdentityResult>
     {
         private readonly UserManager<UserModel> _userManager;
+       
 
         public AddUsersCommandHandler(UserManager<UserModel> userManager)
         {
             _userManager = userManager;
+            
         }
         public async Task<IdentityResult> Handle(AddUsersCommand request, CancellationToken cancellationToken)
         { 

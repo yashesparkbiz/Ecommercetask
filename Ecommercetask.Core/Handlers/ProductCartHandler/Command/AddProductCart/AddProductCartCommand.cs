@@ -31,7 +31,6 @@ namespace Ecommercetask.Core.Handlers.ProductCartHandler.Command.AddProductCart
                 User_Id = request.In.User_Id,
                 Is_Active = request.In.Is_Active
             };
-
             await _db.Product_cart.AddAsync(productcart);
             await _db.SaveChangesAsync();
             return productcart.Id;

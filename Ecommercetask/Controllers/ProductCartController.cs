@@ -10,13 +10,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
-    
     public class ProductCartController : AppApiController
     {
         public ProductCartController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}
         [Authorize]
         [HttpPost("add-product-cart")]
-        public async Task<IActionResult> Add([FromBody] AddProductCartCommand command, CancellationToken ct)
+        public async Task<IActionResult> Add(AddProductCartCommand command, CancellationToken ct)
         {
             return Ok(await _mediator.Send(command, ct));
         }

@@ -10,10 +10,10 @@ namespace Ecommercetask.Data.Data
         [Column("id", TypeName = "int")]
         public int Id { get; set; }
 
-        [Column("total_amount", TypeName = "decimal(6,2)")]
+        [Column("total_amount", TypeName = "decimal(10,3)")]
         public decimal Total_Amount { get; set; }
 
-        [Column("total_discount", TypeName = "decimal(6,2)")]
+        [Column("total_discount", TypeName = "decimal(10,3)")]
         public decimal Total_Discount { get; set; }
 
         [Display(Name = "UserModel")]

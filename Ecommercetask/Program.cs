@@ -75,6 +75,8 @@ if (app.Environment.IsDevelopment())
 app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
 app.UseCors(options => options.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();
+app.UseRouting();
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

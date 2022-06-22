@@ -20,7 +20,7 @@ namespace Ecommercetask.Data.Data
         [Column("quantity", TypeName = "int")]
         public int Quantity { get; set; }
 
-        [Column("price", TypeName = "decimal")]
+        [Column("price", TypeName = "decimal(10,3)")]
         public decimal Price { get; set; }
 
         [Display(Name = "UserModel")]
