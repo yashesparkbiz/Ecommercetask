@@ -1,0 +1,93 @@
+ 2022-06-23 19:29:23,065
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:29:23,081
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-06-23 19:29:43,607
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:29:43,633
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-06-23 19:38:14,340
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-23 19:38:14,346
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-23 19:38:14,349
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-23 19:38:14,351
+ - MESSAGE: Hosting environment: Development
+  2022-06-23 19:38:14,352
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-06-23 19:38:25,775
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:38:26,192
+ - MESSAGE: Executed DbCommand (38ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-06-23 19:38:31,934
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:38:32,064
+ - MESSAGE: Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_cart] ([created_at], [is_active], [price], [product_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [id]
+FROM [Product_cart]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-06-23 19:42:25,074
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:42:25,085
+ - MESSAGE: Executed DbCommand (5ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-06-23 19:45:13,108
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-23 19:45:13,116
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-23 19:45:13,120
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-23 19:45:13,122
+ - MESSAGE: Hosting environment: Development
+  2022-06-23 19:45:13,123
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-06-23 19:45:55,587
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:45:56,020
+ - MESSAGE: Executed DbCommand (37ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-06-23 19:49:31,105
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-23 19:49:31,114
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-23 19:49:31,120
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-23 19:49:31,122
+ - MESSAGE: Hosting environment: Development
+  2022-06-23 19:49:31,125
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-06-23 19:51:22,872
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-06-23 19:51:22,882
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-06-23 19:51:22,886
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-06-23 19:51:22,888
+ - MESSAGE: Hosting environment: Development
+  2022-06-23 19:51:22,890
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-06-23 19:51:41,335
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-06-23 19:51:41,787
+ - MESSAGE: Executed DbCommand (38ms) [Parameters=[@__request_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[price], [p].[product_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product_cart] AS [p]
+WHERE [p].[user_id] = @__request_User_Id_0
+ 

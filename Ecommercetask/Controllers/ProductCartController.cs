@@ -13,14 +13,14 @@ namespace Ecommercetask.Controllers
     public class ProductCartController : AppApiController
     {
         public ProductCartController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}
-        [Authorize]
+        //[Authorize]
         [HttpPost("add-product-cart")]
-        public async Task<IActionResult> Add(AddProductCartCommand command, CancellationToken ct)
+        public async Task<IActionResult> Add([FromBody] AddProductCartCommand command, CancellationToken ct)
         {
             return Ok(await _mediator.Send(command, ct));
         }
 
-        [HttpGet("get-product-cartbyuserid/{user_id}")]
+        [HttpGet("get-product-cartbyuserid/{User_Id}")]
         public async Task<IActionResult> GetByUserId(int User_Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetProductCartByUserIdQuery { User_Id = User_Id }, ct));

@@ -46,7 +46,7 @@ builder.Services.AddDbContext<EcommerceSiteContext>(x => x.UseSqlServer(builder.
 //builder.Services.Configure<IdentityOptions>(options => options.SignIn.RequireConfirmedAccount = false);
 builder.Services.AddIdentity<UserModel, IdentityRole<int>>().AddEntityFrameworkStores<EcommerceSiteContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<JwtHandler>();
-builder.Services.AddCors();
+//builder.Services.AddCors();
 builder.Services.AddAuthentication(opt =>
 {
     opt.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -65,6 +65,14 @@ builder.Services.AddAuthentication(opt =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:securityKey"]))
     };
 });
+builder.Services.AddCors(options => {
+    options.AddPolicy("CorsPolicy",
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader().WithOrigins("http://localhost:4200"));
+});
+
+
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
