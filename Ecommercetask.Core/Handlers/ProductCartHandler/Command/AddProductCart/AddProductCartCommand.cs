@@ -49,7 +49,7 @@ namespace Ecommercetask.Core.Handlers.ProductCartHandler.Command.AddProductCart
         private async Task<List<Product_cart>> SearchInCart(int Product_Id, int User_Id)
         {
             var product = new List<Product_cart>() ;
-           product =await _db.Product_cart.Where(d=>d.Product_Id== Product_Id && d.User_Id == User_Id).ToListAsync();
+            product =await _db.Product_cart.Where(d=>d.Product_Id== Product_Id && d.User_Id == User_Id).ToListAsync();
             return product;
         }
     }

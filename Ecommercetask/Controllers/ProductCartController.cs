@@ -26,10 +26,10 @@ namespace Ecommercetask.Controllers
             return Ok(await _mediator.Send(new GetProductCartByUserIdQuery { User_Id = User_Id }, ct));
         }
 
-        [HttpDelete("delete-product-cart/{Id}")]
-        public async Task<IActionResult> Delete(int Id, CancellationToken ct)
+        [HttpDelete("delete-product-cart/{Id}/{Product_Id}")]
+        public async Task<IActionResult> Delete(int Id, int Product_Id, CancellationToken ct)
         {
-            return Ok(await _mediator.Send(new DeleteProductCartCommand { Id = Id }, ct));
+            return Ok(await _mediator.Send(new DeleteProductCartCommand { Id = Id, product_Id = Product_Id }, ct));
         }
 
         [HttpPut("update-product-cart")]

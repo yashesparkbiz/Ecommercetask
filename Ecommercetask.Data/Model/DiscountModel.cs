@@ -1,5 +1,4 @@
-﻿
-namespace Ecommercetask.Data.Model
+﻿namespace Ecommercetask.Data.Model
 {
     public class DiscountModel
     {

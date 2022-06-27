@@ -31,7 +31,7 @@ namespace Ecommercetask.Data.Data
 
         [Display(Name = "Discount")]
         [Column("discount_id", TypeName = "int")]
-        public virtual int Discount_Id { get; set; }
+        public virtual int Discount_Id { get; set; } 
 
         [ForeignKey("Discount_Id")]
         public virtual Discount Discount { get; set; } 

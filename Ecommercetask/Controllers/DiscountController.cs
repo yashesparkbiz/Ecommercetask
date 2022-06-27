@@ -3,15 +3,14 @@ using Ecommercetask.Core.Handlers.DiscountHandler.Command.DeleteDiscount;
 using Ecommercetask.Core.Handlers.DiscountHandler.Command.UpdateDiscount;
 using Ecommercetask.Core.Handlers.DiscountHandler.Queries.GetAllDiscount;
 using Ecommercetask.Core.Handlers.DiscountHandler.Queries.GetDiscountById;
+using Ecommercetask.Core.Handlers.DiscountHandler.Queries.GetDiscountByProductId;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
-    
     public class DiscountController : AppApiController
     {
         public DiscountController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator)
@@ -34,6 +33,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetById(int Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetDiscountByIdQuery { Id = Id }, ct));
+        }
+
+        [HttpGet("get-discount-byproductid/{Product_Id}")]
+        public async Task<IActionResult> GetByProductId(int Product_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetDiscountByProductIdQuery { Product_Id = Product_Id }, ct));
         }
 
         [HttpDelete("delete-discount/{Id}")]
