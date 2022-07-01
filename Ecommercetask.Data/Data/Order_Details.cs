@@ -42,6 +42,5 @@ namespace Ecommercetask.Data.Data
         [Column("updated_at", TypeName = "datetime")]
         public DateTime Updated_At { get; set; } = DateTime.Now;
 
-        public virtual ICollection<Address>? Address { get; set; }
     }
 }

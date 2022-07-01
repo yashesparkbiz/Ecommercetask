@@ -37,6 +37,7 @@ namespace Ecommercetask.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(SignInUserCommand command, CancellationToken ct)
         {
+
             var status = await _mediator.Send(command, ct);
             if(status.Token == null)
             {

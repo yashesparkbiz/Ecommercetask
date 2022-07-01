@@ -22,10 +22,10 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
         public AddUsersCommandHandler(UserManager<UserModel> userManager)
         {
             _userManager = userManager;
-            
         }
         public async Task<IdentityResult> Handle(AddUsersCommand request, CancellationToken cancellationToken)
-        { 
+        {
+            //request.In.Role = "Customer";
             var user = new UserModel()
             {
                 UserName = request.In.UserName,
@@ -35,7 +35,8 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
                 PhoneNumber = request.In.PhoneNumber
             };
 
-            var result = await _userManager.CreateAsync(user, request.In.Password); 
+            var result = await _userManager.CreateAsync(user, request.In.Password);
+            await _userManager.AddToRoleAsync(user, request.In.Role);
             //await _db.SaveChangesAsync();
             return result  ;
         }

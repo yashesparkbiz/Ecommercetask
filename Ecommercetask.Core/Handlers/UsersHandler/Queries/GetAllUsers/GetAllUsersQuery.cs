@@ -9,6 +9,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Queries.GetAllUsers
 
     public class GetAllProductSubCategoryHandler : IRequestHandler<GetAllUsersQuery, IEnumerable<UsersModel>>
     {
+
         private readonly EcommerceSiteContext _db = null;
 
         public GetAllProductSubCategoryHandler(EcommerceSiteContext db)

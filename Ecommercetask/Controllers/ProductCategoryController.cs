@@ -14,7 +14,7 @@ namespace Ecommercetask.Controllers
     public class ProductCategoryController : AppApiController
     {
         public ProductCategoryController(ILogger<HomeController> logger, IMediator mediator) : base(logger, mediator) { }
-        [Authorized]
+        //[Authorize]
         [HttpGet("get-all-productcategory")]
         public async Task<IActionResult> GetAllProductCategory(CancellationToken ct)
         {

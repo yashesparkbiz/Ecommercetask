@@ -4,11 +4,13 @@ using Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct;
 using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetAllProduct;
 using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductById;
 using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductsBySubCategoryId;
+using Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductsByUserId;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Net.Http.Headers;
 
 namespace Ecommercetask.Controllers
 {
@@ -27,6 +29,13 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetAll(CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetAllProductQuery(), ct));
+        }
+
+        [HttpGet("get-products-byUserid/{User_Id}")]
+        //[Authorize(Roles = "Seller")]
+        public async Task<IActionResult> GetProductsByUserId(int User_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetProductsByUserIdQuery { User_Id = User_Id }, ct));
         }
 
         [HttpGet("get-productbyid/{Id}")]
@@ -51,6 +60,39 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> Update(ProductModel productModel, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new UpdateProductCommand { productModel = productModel }, ct));
+        }
+
+        [HttpPost("add-image"), DisableRequestSizeLimit]
+        [Authorize(Roles = "Seller")]
+        public async Task<IActionResult> Upload()
+        {
+            try
+            {
+                var formCollection = await Request.ReadFormAsync();
+                var file = formCollection.Files.First();
+                var folderName = Path.Combine("Resources", "Images");
+                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
+                if (file.Length > 0)
+                {
+                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
+                    var fullPath = Path.Combine(pathToSave, fileName);
+                    var dbPath = Path.Combine(folderName, fileName);
+                    using (var stream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        file.CopyTo(stream);
+                    }
+                    return Ok(new { dbPath });
+                }
+                else
+                {
+                    return BadRequest();
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex}");
+            }
+            //return "products from seller";
         }
     }
 }

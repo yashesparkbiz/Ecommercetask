@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommercetask.Data.Migrations
 {
     [DbContext(typeof(EcommerceSiteContext))]
-    [Migration("20220615095826_adduseridinProducttable")]
-    partial class adduseridinProducttable
+    [Migration("20220628114939_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,14 +53,19 @@ namespace Ecommercetask.Data.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("house");
 
-                    b.Property<int?>("Order_Details_Id")
+                    b.Property<int?>("Order_Id")
                         .HasColumnType("int")
-                        .HasColumnName("order_details_id");
+                        .HasColumnName("order_id");
 
                     b.Property<string>("Pincode")
                         .IsRequired()
                         .HasColumnType("varchar(20)")
                         .HasColumnName("pincode");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("state");
 
                     b.Property<string>("Street")
                         .IsRequired()
@@ -73,7 +78,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Order_Details_Id");
+                    b.HasIndex("Order_Id");
 
                     b.HasIndex("User_Id");
 
@@ -136,11 +141,11 @@ namespace Ecommercetask.Data.Migrations
                         .HasColumnName("created_at");
 
                     b.Property<decimal>("Total_Amount")
-                        .HasColumnType("decimal(6,2)")
+                        .HasColumnType("decimal(10,3)")
                         .HasColumnName("total_amount");
 
                     b.Property<decimal>("Total_Discount")
-                        .HasColumnType("decimal(6,2)")
+                        .HasColumnType("decimal(10,3)")
                         .HasColumnName("total_discount");
 
                     b.Property<DateTime>("Updated_At")
@@ -291,7 +296,7 @@ namespace Ecommercetask.Data.Migrations
                         .HasColumnName("is_active");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(6,2)")
+                        .HasColumnType("decimal(10,3)")
                         .HasColumnName("price");
 
                     b.Property<int>("Product_Id")
@@ -678,15 +683,15 @@ namespace Ecommercetask.Data.Migrations
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Address", b =>
                 {
-                    b.HasOne("Ecommercetask.Data.Data.Order_Details", "Order_Details")
+                    b.HasOne("Ecommercetask.Data.Data.Order", "Order")
                         .WithMany("Address")
-                        .HasForeignKey("Order_Details_Id");
+                        .HasForeignKey("Order_Id");
 
                     b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
                         .WithMany()
                         .HasForeignKey("User_Id");
 
-                    b.Navigation("Order_Details");
+                    b.Navigation("Order");
 
                     b.Navigation("User");
                 });
@@ -722,7 +727,7 @@ namespace Ecommercetask.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Ecommercetask.Data.Data.Order", "Order")
-                        .WithMany()
+                        .WithMany("Order_Details")
                         .HasForeignKey("Order_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -768,7 +773,7 @@ namespace Ecommercetask.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
-                        .WithMany()
+                        .WithMany("Product_cart")
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -798,7 +803,7 @@ namespace Ecommercetask.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Ecommercetask.Data.Model.UserModel", "User")
-                        .WithMany()
+                        .WithMany("Product_wishlist")
                         .HasForeignKey("User_Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -859,9 +864,11 @@ namespace Ecommercetask.Data.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Ecommercetask.Data.Data.Order_Details", b =>
+            modelBuilder.Entity("Ecommercetask.Data.Data.Order", b =>
                 {
                     b.Navigation("Address");
+
+                    b.Navigation("Order_Details");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product", b =>
@@ -884,6 +891,10 @@ namespace Ecommercetask.Data.Migrations
             modelBuilder.Entity("Ecommercetask.Data.Model.UserModel", b =>
                 {
                     b.Navigation("Product");
+
+                    b.Navigation("Product_cart");
+
+                    b.Navigation("Product_wishlist");
                 });
 #pragma warning restore 612, 618
         }

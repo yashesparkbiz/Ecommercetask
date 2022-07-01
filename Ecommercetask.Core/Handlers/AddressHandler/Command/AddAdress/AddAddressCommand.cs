@@ -28,11 +28,12 @@ namespace Ecommercetask.Core.Handlers.AddressHandler.Command.AddAdress
                 House = request.In.House,
                 Street = request.In.Street,
                 City = request.In.City,
+                State = request.In.State,
                 Country = request.In.Country,
                 Pincode = request.In.Pincode,
                 Address_Type = request.In.Address_Type,
                 User_Id = request.In.User_Id,
-                Order_Details_Id = request.In.Order_Details_Id,
+                Order_Id = request.In.Order_Id,
             };
             await _db.Address.AddAsync(address);
             await _db.SaveChangesAsync();

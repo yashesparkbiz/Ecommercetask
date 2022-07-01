@@ -24,4 +24,8 @@
     <ProjectReference Include="..\Ecommercetask.Shared\Ecommercetask.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Resources\Imges\" />
+  </ItemGroup>
+
 </Project>

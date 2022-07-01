@@ -28,11 +28,12 @@ namespace Ecommercetask.Core.Handlers.AddressHandler.Queries.GetAddressById
                 House = addressbyid.House,
                 Street = addressbyid.Street,
                 City = addressbyid.City,
+                State = addressbyid.State,
                 Country = addressbyid.Country,
                 Pincode = addressbyid.Pincode,
                 Address_Type = addressbyid.Address_Type,
                 User_Id = addressbyid.User_Id,
-                Order_Details_Id = addressbyid.Order_Details_Id,
+                Order_Id = addressbyid.Order_Id,
             };
             return address;
         }

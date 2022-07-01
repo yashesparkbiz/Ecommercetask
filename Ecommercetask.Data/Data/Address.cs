@@ -2,7 +2,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-
 namespace Ecommercetask.Data.Data
 {
     public class Address
@@ -23,6 +22,9 @@ namespace Ecommercetask.Data.Data
         [Column("country", TypeName = "varchar(100)")]
         public string Country { get; set; } = string.Empty;
 
+        [Column("state", TypeName = "varchar(100)")]
+        public string State { get; set; } = string.Empty;
+
         [Column("pincode", TypeName = "varchar(20)")]
         public string Pincode { get; set; } = string.Empty;
 
@@ -36,11 +38,11 @@ namespace Ecommercetask.Data.Data
         [ForeignKey("User_Id")]
         public virtual UserModel User { get; set; }
 
-        [Display(Name = "Order_Details")]
-        [Column("order_details_id", TypeName = "int")]
-        public virtual int? Order_Details_Id { get; set; }
+        [Display(Name = "Order")]
+        [Column("order_id", TypeName = "int")]
+        public virtual int? Order_Id { get; set; }
 
-        [ForeignKey("Order_Details_Id")]
-        public virtual Order_Details Order_Details { get; set; }
+        [ForeignKey("Order_Id")]
+        public virtual Order Order { get; set; }
     }
 }

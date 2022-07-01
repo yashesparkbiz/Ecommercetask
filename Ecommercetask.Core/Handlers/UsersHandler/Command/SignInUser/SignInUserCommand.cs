@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Ecommercetask.Data.Model;
+﻿using Ecommercetask.Data.Model;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -39,11 +38,15 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
 
             if (user == null || !await _userManager.CheckPasswordAsync(user, request.In.Password))
                 return (new AuthResponseDto { ErrorMessage = "Invalid Authentication" });
-            var signingCredentials = _jwtHandler.GetSigningCredentials();
-            var claims = _jwtHandler.GetClaims(user);
-            var tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
-            var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
-            return new AuthResponseDto { IsAuthSuccessful = true, Token = token };
+            else
+            {
+                var role = await _userManager.GetRolesAsync(user);
+                var signingCredentials = _jwtHandler.GetSigningCredentials();
+                var claims = _jwtHandler.GetClaims(user, role);
+                var tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
+                var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
+                return new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = role };
+            }
         }
     }
 
@@ -66,6 +69,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
         public bool IsAuthSuccessful { get; set; }
         public string? ErrorMessage { get; set; }
         public string? Token { get; set; }
+        public IList<string>? Role { get; set; }
     }
 
     public class JwtHandler
@@ -86,11 +90,13 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
 
-        public List<Claim> GetClaims(UserModel user)
+        public List<Claim> GetClaims(UserModel user, IList<string> role)
         {
+            IdentityOptions _options = new IdentityOptions();
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Email)
+                new Claim(ClaimTypes.Name, user.Email),
+                new Claim(_options.ClaimsIdentity.RoleClaimType, role.FirstOrDefault())
             };
             return claims;
         }
@@ -101,7 +107,8 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
                 issuer: _jwtSettings["validIssuer"],
                 audience: _jwtSettings["validAudience"],
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(Convert.ToDouble(_jwtSettings["expiryInMinutes"])),
+                //expires: DateTime.Now.AddMinutes(Convert.ToDouble(_jwtSettings["expiryInMinutes"])),
+                expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: signingCredentials);
             return tokenOptions;
         }

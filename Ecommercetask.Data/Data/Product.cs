@@ -51,8 +51,7 @@ namespace Ecommercetask.Data.Data
         [Column("is_active", TypeName = "bit")]
         public bool Is_Active { get; set; } =true;
 
-        public virtual ICollection<Discount> Discount { get; set; }
-        public virtual ICollection<Order_Details> Order_Details { get; set; }
+        public virtual ICollection<Discount>? Discount { get; set; }
+        public virtual ICollection<Order_Details>? Order_Details { get; set; }
     }
 }
-

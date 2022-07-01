@@ -24,5 +24,7 @@ namespace Ecommercetask.Data.Model
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
         public string ConfirmPassword { get; set; }
+
+        public string Role { get; set; }
     }
 }

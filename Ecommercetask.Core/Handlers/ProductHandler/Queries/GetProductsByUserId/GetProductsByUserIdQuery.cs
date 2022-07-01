@@ -3,26 +3,26 @@ using Ecommercetask.Data.Model;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductsBySubCategoryId
+namespace Ecommercetask.Core.Handlers.ProductHandler.Queries.GetProductsByUserId
 {
-    public class GetProductsBySubCategoryIdQuery : IRequest<IEnumerable<ProductModel>>
+    public class GetProductsByUserIdQuery : IRequest<IEnumerable<ProductModel>>
     {
-        public int Product_Subcategory_Id { get; set; }
+        public int User_Id { get; set; }
     }
 
-    public class GetProductsBySubCategoryIdHandler : IRequestHandler<GetProductsBySubCategoryIdQuery, IEnumerable<ProductModel>>
+    public class GetProductsByUserIdHandler : IRequestHandler<GetProductsByUserIdQuery, IEnumerable<ProductModel>>
     {
         private readonly EcommerceSiteContext _db = null;
 
-        public GetProductsBySubCategoryIdHandler(EcommerceSiteContext db)
+        public GetProductsByUserIdHandler(EcommerceSiteContext db)
         {
             _db = db;
         }
 
-        public async Task<IEnumerable<ProductModel>> Handle(GetProductsBySubCategoryIdQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<ProductModel>> Handle(GetProductsByUserIdQuery request, CancellationToken cancellationToken)
         {
             var products = new List<ProductModel>();
-            var allproducts = await _db.Product.Where(d => d.Product_Subcategory_Id == request.Product_Subcategory_Id).ToListAsync();
+            var allproducts = await _db.Product.Where(d => d.User_Id == request.User_Id).ToListAsync();
             if (allproducts?.Any() == true)
             {
                 foreach (var product in allproducts)

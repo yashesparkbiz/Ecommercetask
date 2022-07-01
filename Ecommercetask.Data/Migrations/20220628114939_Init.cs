@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Ecommercetask.Data.Migrations
 {
-    public partial class init : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -222,8 +222,8 @@ namespace Ecommercetask.Data.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    total_amount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
-                    total_discount = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
+                    total_amount = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
+                    total_discount = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime", nullable: false)
@@ -252,6 +252,7 @@ namespace Ecommercetask.Data.Migrations
                     product_subcategory_id = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
                     image = table.Column<string>(type: "varchar(100)", nullable: false),
+                    user_id = table.Column<int>(type: "int", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime", nullable: false),
                     updated_at = table.Column<DateTime>(type: "datetime", nullable: false),
                     is_active = table.Column<bool>(type: "bit", nullable: false)
@@ -265,6 +266,43 @@ namespace Ecommercetask.Data.Migrations
                         principalTable: "Product_subcategory",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Product_Users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Address",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    house = table.Column<string>(type: "varchar(100)", nullable: false),
+                    street = table.Column<string>(type: "varchar(100)", nullable: false),
+                    city = table.Column<string>(type: "varchar(100)", nullable: false),
+                    country = table.Column<string>(type: "varchar(100)", nullable: false),
+                    state = table.Column<string>(type: "varchar(100)", nullable: false),
+                    pincode = table.Column<string>(type: "varchar(20)", nullable: false),
+                    address_type = table.Column<string>(type: "varchar(20)", nullable: false),
+                    user_id = table.Column<int>(type: "int", nullable: true),
+                    order_id = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Address", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_Address_Order_order_id",
+                        column: x => x.order_id,
+                        principalTable: "Order",
+                        principalColumn: "id");
+                    table.ForeignKey(
+                        name: "FK_Address_Users_user_id",
+                        column: x => x.user_id,
+                        principalTable: "Users",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -299,7 +337,7 @@ namespace Ecommercetask.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     product_id = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false),
-                    price = table.Column<decimal>(type: "decimal(6,2)", nullable: false),
+                    price = table.Column<decimal>(type: "decimal(10,3)", nullable: false),
                     user_id = table.Column<int>(type: "int", nullable: false),
                     is_active = table.Column<bool>(type: "bit", nullable: false),
                     created_at = table.Column<DateTime>(type: "datetime", nullable: false),
@@ -319,7 +357,7 @@ namespace Ecommercetask.Data.Migrations
                         column: x => x.user_id,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -347,7 +385,7 @@ namespace Ecommercetask.Data.Migrations
                         column: x => x.user_id,
                         principalTable: "Users",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -378,7 +416,7 @@ namespace Ecommercetask.Data.Migrations
                         column: x => x.order_id,
                         principalTable: "Order",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Order_Details_Product_product_id",
                         column: x => x.product_id,
@@ -387,40 +425,10 @@ namespace Ecommercetask.Data.Migrations
                         onDelete: ReferentialAction.NoAction);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Address",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    house = table.Column<string>(type: "varchar(100)", nullable: false),
-                    street = table.Column<string>(type: "varchar(100)", nullable: false),
-                    city = table.Column<string>(type: "varchar(100)", nullable: false),
-                    country = table.Column<string>(type: "varchar(100)", nullable: false),
-                    pincode = table.Column<string>(type: "varchar(20)", nullable: false),
-                    address_type = table.Column<string>(type: "varchar(20)", nullable: false),
-                    user_id = table.Column<int>(type: "int", nullable: true),
-                    order_details_id = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Address", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_Address_Order_Details_order_details_id",
-                        column: x => x.order_details_id,
-                        principalTable: "Order_Details",
-                        principalColumn: "id");
-                    table.ForeignKey(
-                        name: "FK_Address_Users_user_id",
-                        column: x => x.user_id,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                });
-
             migrationBuilder.CreateIndex(
-                name: "IX_Address_order_details_id",
+                name: "IX_Address_order_id",
                 table: "Address",
-                column: "order_details_id");
+                column: "order_id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Address_user_id",
@@ -485,6 +493,11 @@ namespace Ecommercetask.Data.Migrations
                 column: "product_subcategory_id");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Product_user_id",
+                table: "Product",
+                column: "user_id");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Product_cart_product_id",
                 table: "Product_cart",
                 column: "product_id");
@@ -543,6 +556,9 @@ namespace Ecommercetask.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Order_Details");
+
+            migrationBuilder.DropTable(
                 name: "Product_cart");
 
             migrationBuilder.DropTable(
@@ -550,9 +566,6 @@ namespace Ecommercetask.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "User");
-
-            migrationBuilder.DropTable(
-                name: "Order_Details");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -567,10 +580,10 @@ namespace Ecommercetask.Data.Migrations
                 name: "Product");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Product_subcategory");
 
             migrationBuilder.DropTable(
-                name: "Product_subcategory");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Product_category");
