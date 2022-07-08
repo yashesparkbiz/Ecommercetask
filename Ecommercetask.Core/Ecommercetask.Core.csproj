@@ -18,9 +18,4 @@
     <ProjectReference Include="..\Ecommercetask.Shared\Ecommercetask.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Handlers\UsersHandler\Command\DeleteUsers\" />
-    <Folder Include="Handlers\UsersHandler\Command\UpdateUsers\" />
-  </ItemGroup>
-
 </Project>

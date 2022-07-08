@@ -21,6 +21,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Queries.GetAllUsers
         {
             var users = new List<UsersModel>();
             var allusers = await _db.Users.ToListAsync();
+
             if (allusers?.Any() == true)
             {
                 foreach (var user in allusers)

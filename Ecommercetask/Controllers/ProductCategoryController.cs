@@ -1,16 +1,15 @@
 ﻿using Ecommercetask.Core.Handlers.ProductCategoryHandler.Command;
 using Ecommercetask.Core.Handlers.ProductCategoryHandler.Command.DeleteProductCategory;
 using Ecommercetask.Core.Handlers.ProductCategoryHandler.Command.UpdateProductCategory;
+using Ecommercetask.Core.Handlers.ProductCategoryHandler.Queries.GetCategoryIdBySubcategoryId;
 using Ecommercetask.Core.Handlers.ProductCategoryHandler.Queries.GetProductCategoryById;
 using Ecommercetask.Core.Helper.ProductCategoryHelper.Queries.GetAllProductCategory;
 using Ecommercetask.Shared;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
 {
-    
     public class ProductCategoryController : AppApiController
     {
         public ProductCategoryController(ILogger<HomeController> logger, IMediator mediator) : base(logger, mediator) { }
@@ -19,6 +18,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetAllProductCategory(CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetAllProductCategoryQuery(), ct));
+        }
+
+        [HttpGet("get-id-bysubcategoryid/{Subcategory_Id}")]
+        public async Task<IActionResult> GetCategoryIdBySubcategoryId(int Subcategory_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetCategoryIdBySubcategoryIdQuery { Subcategory_Id = Subcategory_Id }, ct));
         }
 
         [HttpPost("add-productcategory")]

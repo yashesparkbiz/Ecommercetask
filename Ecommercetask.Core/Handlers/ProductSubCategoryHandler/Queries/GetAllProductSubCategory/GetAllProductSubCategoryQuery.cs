@@ -35,5 +35,4 @@ namespace Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetAllPr
             return productsubcategory;
         }
     }
-
 }

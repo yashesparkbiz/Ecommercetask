@@ -1,0 +1,677 @@
+ 2022-07-04 13:25:44,961
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:25:44,962
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:25:44,999
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 13:25:44,999
+ - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 13:25:45,057
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:25:45,064
+ - MESSAGE: Executed DbCommand (5ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 13:25:45,085
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:25:45,091
+ - MESSAGE: Executed DbCommand (5ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 13:26:25,121
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:26:25,228
+ - MESSAGE: Failed executing DbCommand (7ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 13:26:25,254
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:816e7d97-1413-445c-b506-f2634e02231a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:816e7d97-1413-445c-b506-f2634e02231a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 13:26:25,324
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 13:27:17,112
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:27:17,114
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:27:17,114
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 13:27:17,114
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 13:27:17,142
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:27:17,144
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 13:27:18,224
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:27:18,227
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 13:27:47,333
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:27:47,340
+ - MESSAGE: Failed executing DbCommand (4ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 13:27:47,343
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:816e7d97-1413-445c-b506-f2634e02231a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:816e7d97-1413-445c-b506-f2634e02231a
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 13:27:47,347
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 13:28:56,202
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-04 13:28:56,209
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-04 13:28:56,213
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-04 13:28:56,215
+ - MESSAGE: Hosting environment: Development
+  2022-07-04 13:28:56,217
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-04 13:29:40,888
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:29:41,339
+ - MESSAGE: Failed executing DbCommand (100ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 13:29:41,387
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 13:29:41,688
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 13:30:06,225
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:30:06,232
+ - MESSAGE: Failed executing DbCommand (3ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 13:30:06,241
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 13:30:06,382
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 13:31:28,778
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:31:28,780
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:31:28,940
+ - MESSAGE: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 13:31:28,943
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 13:31:36,013
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:31:36,019
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 13:31:41,187
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:31:41,194
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 13:31:56,306
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:31:56,312
+ - MESSAGE: Failed executing DbCommand (4ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 13:31:56,321
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:63dbbacd-a4e0-433b-88bd-225c18ab01d5
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 13:31:56,480
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 13:32:44,530
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:32:44,532
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:32:44,536
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 13:32:44,540
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 13:33:12,964
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:33:12,969
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 13:33:14,262
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 13:33:14,268
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[user_id] = @__request_User_Id_0
+  2022-07-04 14:21:32,882
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:21:32,883
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:21:32,921
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 14:21:32,930
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 14:21:46,638
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:21:46,654
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 14:21:49,649
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:21:49,652
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 14:22:11,505
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:22:11,512
+ - MESSAGE: Failed executing DbCommand (4ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 14:22:11,520
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bfc7f9dd-f9f3-4cb1-b84e-4aba4dbe71e1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bfc7f9dd-f9f3-4cb1-b84e-4aba4dbe71e1
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-04 14:22:11,656
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct.UpdateProductCommandHandler.Handle(UpdateProductCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductHandler\\Command\\UpdateProduct\\UpdateProductCommand.cs:line 39\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductController.Update(ProductModel productModel, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductController.cs:line 62\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-04 14:24:03,808
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-04 14:24:03,813
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-04 14:24:03,815
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-04 14:24:03,815
+ - MESSAGE: Hosting environment: Development
+  2022-07-04 14:24:03,815
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-04 14:24:38,055
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:24:38,455
+ - MESSAGE: Executed DbCommand (37ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 14:25:12,941
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:12,949
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 14:25:12,988
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:12,988
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:12,992
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 14:25:12,995
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 14:25:13,004
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:13,009
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 14:25:32,511
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:32,512
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:32,513
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 14:25:32,516
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 14:25:32,539
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:32,540
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 14:25:32,553
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:25:32,555
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 14:25:57,491
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-04 14:25:57,497
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-04 14:25:57,500
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-04 14:25:57,501
+ - MESSAGE: Hosting environment: Development
+  2022-07-04 14:25:57,502
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-04 14:26:24,016
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:26:24,016
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:26:24,339
+ - MESSAGE: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-04 14:26:24,340
+ - MESSAGE: Executed DbCommand (30ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-04 14:26:27,853
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:26:27,863
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Subcategory_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__request_Subcategory_Id_0
+  2022-07-04 14:26:33,298
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:26:33,305
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-04 14:26:44,165
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-04 14:26:44,291
+ - MESSAGE: Failed executing DbCommand (10ms) [Parameters=[@p0='?' (Size = 100) (DbType = AnsiString), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (Size = 100) (DbType = AnsiString), @p4='?' (DbType = Boolean), @p5='?' (Precision = 10) (Scale = 3) (DbType = Decimal), @p6='?' (Size = 255) (DbType = AnsiString), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = DateTime), @p10='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product] ([brand], [created_at], [description], [image], [is_active], [price], [product_name], [product_subcategory_id], [quantity], [updated_at], [user_id])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+SELECT [id]
+FROM [Product]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-04 14:26:44,337
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4700ff32-1257-4bf3-993b-7341d7c9e209
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_Product_subcategory_product_subcategory_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_subcategory", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:4700ff32-1257-4bf3-993b-7341d7c9e209
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)

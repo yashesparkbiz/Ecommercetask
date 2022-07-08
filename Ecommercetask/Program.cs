@@ -71,7 +71,7 @@ builder.Services.AddCors(options => {
     options.AddPolicy("CorsPolicy",
         builder => builder.AllowAnyOrigin()
         .AllowAnyMethod()
-        .AllowAnyHeader().WithOrigins("http://localhost:4200", "http://localhost:5001"));
+        .AllowAnyHeader().WithOrigins("http://localhost:4200", "http://localhost:5001", "http://localhost:54155"));
 });
 
 builder.Services.Configure<FormOptions>(o =>
@@ -90,7 +90,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseMiddleware(typeof(ExceptionHandlingMiddleware));
-app.UseCors(options => options.WithOrigins("http://localhost:4200", "http://localhost:5001").AllowAnyMethod().AllowAnyHeader());
+app.UseCors(options => options.WithOrigins("http://localhost:4200", "http://localhost:5001", "http://localhost:54155").AllowAnyMethod().AllowAnyHeader());
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseHttpsRedirection();

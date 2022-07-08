@@ -20,15 +20,22 @@ namespace Ecommercetask.Core.Handlers.ProductCategoryHandler.Command.UpdateProdu
 
         public async Task<bool> Handle(UpdateProductCategoryCommand request, CancellationToken cancellationToken)
         {
-            var productcategory = new Product_category()
+            if(request.productCategoryModel.Id > 0)
             {
-                Id = request.productCategoryModel.Id,
-                Name = request.productCategoryModel.Name,
-                Is_Active = request.productCategoryModel.Is_Active,
-            };
-            _db.Product_category.Update(productcategory);
-            await _db.SaveChangesAsync();
-            return true;
+                var productcategory = new Product_category()
+                {
+                    Id = request.productCategoryModel.Id,
+                    Name = request.productCategoryModel.Name,
+                    Is_Active = request.productCategoryModel.Is_Active,
+                };
+                _db.Product_category.Update(productcategory);
+                await _db.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

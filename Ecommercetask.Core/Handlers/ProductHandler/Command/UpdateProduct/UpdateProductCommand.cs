@@ -22,22 +22,29 @@ namespace Ecommercetask.Core.Handlers.ProductHandler.Command.UpdateProduct
 
         public async Task<bool> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
-            var product = new Product()
+            if(request != null )
             {
-                Id = request.productModel.Id,
-                Product_Name = request.productModel.Product_Name,
-                Description = request.productModel.Description,
-                Brand = request.productModel.Brand,
-                Price = request.productModel.Price,
-                Product_Subcategory_Id = request.productModel.Product_Subcategory_Id,
-                Quantity = request.productModel.Quantity,
-                Image = request.productModel.Image,
-                Is_Active = request.productModel.Is_Active,
-                User_Id = request.productModel.User_Id,
-            };
-            _db.Product.Update(product);
-            await _db.SaveChangesAsync();
-            return true;
+                var product = new Product()
+                {
+                    Id = request.productModel.Id,
+                    Product_Name = request.productModel.Product_Name,
+                    Description = request.productModel.Description,
+                    Brand = request.productModel.Brand,
+                    Price = request.productModel.Price,
+                    Product_Subcategory_Id = request.productModel.Product_Subcategory_Id,
+                    Quantity = request.productModel.Quantity,
+                    Image = request.productModel.Image,
+                    Is_Active = request.productModel.Is_Active,
+                    User_Id = request.productModel.User_Id,
+                };
+                _db.Product.Update(product);
+                await _db.SaveChangesAsync();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

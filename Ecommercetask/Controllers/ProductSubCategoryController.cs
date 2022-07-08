@@ -3,6 +3,7 @@ using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Command.DeleteProduc
 using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Command.UpdateProductSubCategory;
 using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetAllProductSubcategoriesByProductCategoryId;
 using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetAllProductSubCategory;
+using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetProductSubCategory;
 using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetProductSubCategoryById;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
@@ -28,6 +29,13 @@ namespace Ecommercetask.Controllers
         {
             //throw new System.Exception("An error occurred");
             return Ok(await _mediator.Send(new GetAllProductSubCategoryQuery(), ct));
+        }
+
+        [HttpGet("get-all-product-subcategory-withcategoryname")]
+        public async Task<IActionResult> Get(CancellationToken ct)
+        {
+            //throw new System.Exception("An error occurred");
+            return Ok(await _mediator.Send(new GetProductSubCategoryQuery(), ct));
         }
 
         [HttpGet("get-product-subcategorybyid/{Id}")]

@@ -1,0 +1,1251 @@
+ 2022-07-07 11:45:12,761
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 11:45:12,766
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 11:45:12,767
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 11:45:12,767
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 11:45:12,768
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 11:48:04,571
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 11:48:04,920
+ - MESSAGE: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 11:50:31,429
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 11:50:31,503
+ - MESSAGE: Executed DbCommand (20ms) [Parameters=[@__request_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[user_id] = @__request_User_Id_0
+  2022-07-07 11:50:34,959
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 11:50:34,961
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 11:50:44,505
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 11:50:44,510
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Category_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[category_id] = @__request_Category_Id_0
+  2022-07-07 11:58:11,899
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 11:58:11,905
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:00:21,199
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:00:21,203
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:00:50,669
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:00:50,670
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:01:00,466
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:01:00,467
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:01:04,215
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:01:04,217
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:01:14,337
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:01:14,338
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:02:12,559
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:02:12,560
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:02:19,400
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:02:19,400
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:08:37,875
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:08:37,877
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:09:01,528
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:09:01,530
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:09:14,848
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:09:14,848
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:11:11,441
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:11:11,443
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:11:27,507
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:11:27,508
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:11:45,297
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:11:45,297
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:33:11,860
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:33:11,969
+ - MESSAGE: Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 12:33:27,636
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:33:27,652
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 12:33:27,673
+ - MESSAGE: Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_category]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 12:45:28,240
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:45:28,244
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:46:36,550
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:46:36,551
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:46:38,724
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:46:38,725
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:47:20,160
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:47:20,164
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:47:36,610
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:47:36,611
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:48:31,817
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:48:31,818
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:49:21,105
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:49:21,106
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:50:08,362
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:50:08,363
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:50:25,719
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:50:25,720
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:51:01,127
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:51:01,131
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 12:51:31,877
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:51:31,878
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:52:16,489
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:52:16,490
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:52:21,303
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:52:21,306
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 12:52:52,397
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:52:52,398
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:53:21,830
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:53:21,831
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:56:08,100
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:56:08,102
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:56:56,231
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:56:56,232
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:58:03,612
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 12:58:03,618
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 12:58:03,621
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 12:58:03,622
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 12:58:03,623
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 12:58:32,551
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:58:32,916
+ - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 12:59:11,442
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 12:59:11,591
+ - MESSAGE: Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 13:00:27,755
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 13:00:27,759
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 13:00:27,761
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 13:00:27,761
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 13:00:27,761
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 13:05:38,059
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:05:38,452
+ - MESSAGE: Executed DbCommand (35ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 13:05:38,603
+ - MESSAGE: Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_category]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 13:06:01,233
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:06:01,237
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:06:32,890
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:06:32,892
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:06:57,210
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:06:57,211
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:07:00,959
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:07:00,960
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:07:17,924
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:07:17,925
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:08:23,950
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:08:23,952
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:08:53,148
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:08:53,179
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 13:09:13,682
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:09:13,684
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:11:20,545
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:11:20,547
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:11:35,070
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:11:35,073
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 13:11:35,081
+ - MESSAGE: Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_category]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 13:11:45,968
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:11:45,969
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:12:26,998
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:12:26,999
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:13:00,587
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:13:00,588
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:13:16,708
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:13:16,709
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:13:25,596
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:13:25,601
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 13:13:25,609
+ - MESSAGE: Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_category]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 13:13:26,900
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:13:26,904
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:14:34,824
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:14:34,825
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:18:31,884
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:18:31,894
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 13:22:08,298
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:22:08,300
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 13:22:08,308
+ - MESSAGE: Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_category]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 13:29:52,855
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:29:52,863
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 13:32:25,312
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:32:25,314
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_category] ([created_at], [is_active], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_category]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 13:34:08,028
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 13:34:08,033
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 13:34:08,035
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 13:34:08,035
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 13:34:08,035
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 13:34:42,263
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 13:34:42,267
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 13:34:42,269
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 13:34:42,269
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 13:34:42,269
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 13:38:38,696
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:38:39,030
+ - MESSAGE: Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 13:38:41,034
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 13:38:41,037
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 14:43:10,780
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 14:43:10,789
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 14:46:27,353
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 14:46:27,354
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 14:50:11,755
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 14:50:11,756
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 14:57:46,201
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 14:57:46,204
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 15:40:23,478
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:40:23,559
+ - MESSAGE: Executed DbCommand (16ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 15:45:33,356
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:45:33,358
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 15:45:49,000
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:45:49,001
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 15:45:57,226
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:45:57,229
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 15:47:15,073
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:47:15,076
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 15:48:24,496
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 15:48:24,504
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 15:48:24,507
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 15:48:24,509
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 15:48:24,510
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 15:48:56,100
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:48:56,460
+ - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 15:49:09,139
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 15:49:09,230
+ - MESSAGE: Executed DbCommand (18ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 16:06:02,393
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:06:02,399
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:06:02,402
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:06:02,403
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:06:02,404
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:06:15,203
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:06:15,564
+ - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:17:17,803
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:17:17,808
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:17:17,809
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:17:17,809
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:17:17,809
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:19:04,293
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:19:04,704
+ - MESSAGE: Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:21:29,209
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:21:29,215
+ - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:22:25,926
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:22:25,927
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:25:23,956
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:25:23,958
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:26:02,728
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:26:02,729
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:29:33,515
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:29:33,518
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:30:49,664
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:30:49,667
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:34:08,263
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:34:08,265
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:34:13,594
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:34:13,594
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:34:23,996
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:34:23,997
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:34:31,809
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:34:31,809
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:36:02,147
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:36:02,151
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:36:47,928
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:36:47,930
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:37:35,886
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:37:35,893
+ - MESSAGE: Executed DbCommand (7ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:38:53,445
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:38:53,452
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:38:53,456
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:38:53,458
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:38:53,459
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:42:27,741
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:42:27,749
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:42:27,753
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:42:27,755
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:42:27,756
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:42:44,158
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:42:44,510
+ - MESSAGE: Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:43:30,188
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:43:30,286
+ - MESSAGE: Executed DbCommand (19ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 16:45:33,292
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:45:33,295
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:51:20,316
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:51:20,336
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:51:42,479
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:51:42,497
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 16:52:05,931
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:52:05,937
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:52:05,939
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:52:05,939
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:52:05,939
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:52:13,390
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 16:52:13,401
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 16:52:13,404
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 16:52:13,405
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 16:52:13,406
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 16:58:01,812
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:58:02,163
+ - MESSAGE: Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:58:04,414
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:58:04,421
+ - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 16:58:18,593
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:58:18,690
+ - MESSAGE: Executed DbCommand (16ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 16:59:33,594
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 16:59:33,598
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:00:45,149
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:00:45,168
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 17:00:45,171
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:00:45,175
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:01:00,661
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:01:00,663
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 17:02:03,995
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:02:04,455
+ - MESSAGE: Executed DbCommand (4ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product_category] SET [created_at] = @p0, [is_active] = @p1, [name] = @p2, [updated_at] = @p3
+WHERE [id] = @p4;
+SELECT @@ROWCOUNT;
+  2022-07-07 17:02:24,692
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:02:24,695
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:02:39,359
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:02:39,363
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 17:03:10,030
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:03:10,033
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Boolean), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Product_category] SET [created_at] = @p0, [is_active] = @p1, [name] = @p2, [updated_at] = @p3
+WHERE [id] = @p4;
+SELECT @@ROWCOUNT;
+  2022-07-07 17:03:12,540
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:03:12,543
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:03:37,901
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:03:37,904
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:03:48,735
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:03:48,738
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:04:07,602
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:04:07,606
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:05:39,340
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:05:39,344
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:09:20,296
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:09:20,299
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 17:11:59,525
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 17:11:59,529
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 17:11:59,531
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 17:11:59,531
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 17:11:59,531
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 17:12:09,241
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 17:12:09,524
+ - MESSAGE: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 18:13:30,888
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 18:13:30,966
+ - MESSAGE: Executed DbCommand (16ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+WHERE [p].[id] = @__request_Id_0
+  2022-07-07 19:20:43,766
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-07 19:20:43,771
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-07 19:20:43,772
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-07 19:20:43,773
+ - MESSAGE: Hosting environment: Development
+  2022-07-07 19:20:43,773
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-07 19:20:50,452
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:50,771
+ - MESSAGE: Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:55,378
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:55,381
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:57,382
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:57,383
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:57,868
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:57,869
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:58,348
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:58,349
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:58,845
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:58,845
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:59,228
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:59,228
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:20:59,684
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:20:59,685
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:21:00,068
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:21:00,069
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:21:00,422
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:21:00,423
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:21:00,852
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:21:00,852
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:21:39,093
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:21:39,095
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:21:42,862
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:21:42,867
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:24:46,956
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:24:46,958
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:29:14,575
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:29:14,576
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:30:25,694
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:30:25,695
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:30:25,696
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:30:25,700
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:31:05,326
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:31:05,326
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:31:05,327
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:31:05,328
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:33:54,323
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:33:54,323
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:33:54,324
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:33:54,325
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:46:49,904
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:46:49,904
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:46:49,908
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:46:49,910
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:48:19,311
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:48:19,430
+ - MESSAGE: Failed executing DbCommand (23ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_subcategory] ([category_id], [created_at], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_subcategory]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 19:48:19,485
+ - MESSAGE: An exception occurred in the database while saving changes for context type 'Ecommercetask.Data.Data.EcommerceSiteContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_subcategory_Product_category_category_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_category", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6b00c8ef-37c3-48aa-8c36-902aa3b8d3e8
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Product_subcategory_Product_category_category_id". The conflict occurred in database "EcommercetaskDemo1", table "dbo.Product_category", column 'id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__188_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:6b00c8ef-37c3-48aa-8c36-902aa3b8d3e8
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+ 2022-07-07 19:48:19,578
+ - MESSAGE: {"Message":"An error occurred while saving the entity changes. See the inner exception for details.","Code":"400","Path":"   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)\r\n   at Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Command.AddProductSubCategory.AddProductCategoryCommandHandler.Handle(AddProductSubCategoryCommand request, CancellationToken cancellationToken) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask.Core\\Handlers\\ProductSubCategoryHandler\\Command\\AddProductSubCategory\\AddProductSubCategoryCommand.cs:line 35\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestExceptionActionProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)\r\n   at Ecommercetask.Controllers.ProductSubCategoryController.Add(AddProductSubCategoryCommand command, CancellationToken ct) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Controllers\\ProductSubCategoryController.cs:line 24\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Ecommercetask.Middleware.ExceptionHandlingMiddleware.Invoke(HttpContext context, ILogger`1 logger) in C:\\Users\\R5\\Desktop\\EcommerceBackup\\Ecommercetask2\\Ecommercetask\\Middleware\\ExceptionHandlingMiddleware.cs:line 19"}
+  2022-07-07 19:49:01,794
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:49:01,794
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:49:01,795
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:49:01,796
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:50:27,863
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:50:27,863
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:50:27,864
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:50:27,865
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:51:00,499
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:51:00,501
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:51:00,501
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:51:00,502
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:51:17,378
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:51:17,378
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:51:17,379
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:51:17,379
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:52:27,718
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:52:27,721
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = DateTime), @p2='?' (Size = 255) (DbType = AnsiString), @p3='?' (DbType = DateTime)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Product_subcategory] ([category_id], [created_at], [name], [updated_at])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [id]
+FROM [Product_subcategory]
+WHERE @@ROWCOUNT = 1 AND [id] = scope_identity();
+  2022-07-07 19:52:29,328
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:52:29,329
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:52:29,329
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:52:29,330
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:52:49,298
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:52:49,298
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:52:49,299
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:52:49,299
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:55:07,858
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:07,925
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 19:55:27,134
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:27,134
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:27,135
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:55:27,136
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:55:53,829
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:53,830
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:53,831
+ - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:55:53,831
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:55:59,761
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:59,761
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:55:59,762
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+  2022-07-07 19:55:59,762
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:56:02,949
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:56:02,952
+ - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+WHERE [p].[id] = @__p_0
+  2022-07-07 19:56:02,970
+ - MESSAGE: Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Product_subcategory]
+WHERE [id] = @p0;
+SELECT @@ROWCOUNT;
+  2022-07-07 19:56:04,879
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:56:04,879
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-07 19:56:04,880
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-07 19:56:04,880
+ - MESSAGE: Executed DbCommand (0ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[category_id], [p].[created_at], [p].[name], [p].[updated_at]
+FROM [Product_subcategory] AS [p]
+ 
