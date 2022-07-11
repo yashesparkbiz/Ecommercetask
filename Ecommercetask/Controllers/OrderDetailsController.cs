@@ -3,6 +3,7 @@ using Ecommercetask.Core.Handlers.OrderDetailsHandler.Command.DeleteOrderDetails
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Command.UpdateOrderDetails;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetAllOrderDetails;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetOrderDetailsById;
+using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetOrderDetailsByOrderId;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
@@ -34,6 +35,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetById(int Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetOrderDetailsByIdQuery { Id = Id }, ct));
+        }
+
+        [HttpGet("get-orderdetails-byorderid/{Order_Id}")]
+        public async Task<IActionResult> GetByOrderId(int Order_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetOrderDetailsByOrderIdQuery { Order_Id = Order_Id }, ct));
         }
 
         [HttpDelete("delete-orderdetailsbyid/{Id}")]

@@ -20,7 +20,6 @@ namespace Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetProdu
         {
             var productsubcategory = new List<SubCategoryModel>();
             //var allproductsubcategory =  await _db.Product_subcategory.ToListAsync();
-
             var allproductsubcategory = await (from sb in _db.Product_subcategory
                                   join ct in _db.Product_category
                                   on sb.Category_Id equals ct.Id
