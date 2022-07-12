@@ -1,4 +1,5 @@
-﻿using Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers;
+﻿using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetUserByRoleId;
+using Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.DeleteUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.UpdateUsers;
@@ -66,6 +67,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetUserById(int Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetUserByIdQuery { Id = Id }, ct));
+        }
+
+        [HttpGet("get-user-byrole/{RoleName}")]
+        public async Task<IActionResult> GetUserByRoleId(string RoleName, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetUserByRoleIdQuery { RoleName = RoleName }, ct));
         }
 
         [HttpDelete("delete-user-byid/{Id}")]

@@ -1,7 +1,5 @@
 ﻿using Ecommercetask.Data.Data;
-using Ecommercetask.Data.Model;
 using MediatR;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Ecommercetask.Core.Handlers.UsersHandler.Command.DeleteUsers

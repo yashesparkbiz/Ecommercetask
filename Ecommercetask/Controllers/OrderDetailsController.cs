@@ -2,6 +2,7 @@
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Command.DeleteOrderDetails;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Command.UpdateOrderDetails;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetAllOrderDetails;
+using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetAllOrderDetailsForSeller;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetOrderDetailsById;
 using Ecommercetask.Core.Handlers.OrderDetailsHandler.Queries.GetOrderDetailsByOrderId;
 using Ecommercetask.Data.Model;
@@ -29,6 +30,12 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> GetAll(CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetAllOrderDetailsQuery(), ct));
+        }
+
+        [HttpGet("get-all-orderdetails-forseller/{user_Id}")]
+        public async Task<IActionResult> GetAllForSeller(int user_Id, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new GetAllOrderDetailsForSellerQuery { user_Id = user_Id }, ct));
         }
 
         [HttpGet("get-orderdetailsbyid/{Id}")]

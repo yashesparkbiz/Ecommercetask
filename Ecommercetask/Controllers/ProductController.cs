@@ -62,9 +62,8 @@ namespace Ecommercetask.Controllers
             return Ok(await _mediator.Send(new UpdateProductCommand { productModel = productModel }, ct));
         }
 
-        [HttpPost("add-image"), DisableRequestSizeLimit]
-        [Authorize(Roles = "Seller")]
-        public async Task<IActionResult> Upload()
+        [HttpPost("upload-file"), DisableRequestSizeLimit]
+        public async Task<IActionResult> Upload(CancellationToken ct)
         {
             try
             {
@@ -92,7 +91,6 @@ namespace Ecommercetask.Controllers
             {
                 return StatusCode(500, $"Internal server error: {ex}");
             }
-            //return "products from seller";
         }
     }
 }
