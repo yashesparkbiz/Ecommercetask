@@ -32,7 +32,7 @@ namespace Ecommercetask.Controllers
             return Ok(await _mediator.Send(new GetAllOrderDetailsQuery(), ct));
         }
 
-        [HttpGet("get-all-orderdetails-forseller/{user_Id}")]
+        [HttpGet("get-all-orderdetails-forseller/{user_Id}"), Authorize]
         public async Task<IActionResult> GetAllForSeller(int user_Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetAllOrderDetailsForSellerQuery { user_Id = user_Id }, ct));

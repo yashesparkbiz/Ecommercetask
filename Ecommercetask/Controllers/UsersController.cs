@@ -1,6 +1,7 @@
 ﻿using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetUserByRoleId;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.DeleteUsers;
+using Ecommercetask.Core.Handlers.UsersHandler.Command.RefreshToken;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.UpdateUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Queries.GetAllUsers;
@@ -42,7 +43,6 @@ namespace Ecommercetask.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(SignInUserCommand command, CancellationToken ct)
         {
-
             var status = await _mediator.Send(command, ct);
             if (status.Token == null)
             {
@@ -85,6 +85,21 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> Update(UsersModel usersModel, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new UpdateUserCommand { usersModel = usersModel }, ct));
+        }
+
+        [HttpPost]
+        [Route("refresh-token")]
+        public async Task<IActionResult> RefreshToken(TokenModel tokenModel, CancellationToken ct)
+        {
+            var tokenmodel = await _mediator.Send(new RefreshTokenCommand { tokenModel = tokenModel }, ct);
+            if(tokenmodel.AccessToken == "")
+            {
+                return BadRequest(tokenmodel.RefreshToken);
+            }
+            else
+            {
+                return Ok(tokenmodel);
+            }
         }
     }
 }

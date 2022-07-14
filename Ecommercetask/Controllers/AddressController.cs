@@ -5,7 +5,6 @@ using Ecommercetask.Core.Handlers.AddressHandler.Queries.GetAddressById;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers

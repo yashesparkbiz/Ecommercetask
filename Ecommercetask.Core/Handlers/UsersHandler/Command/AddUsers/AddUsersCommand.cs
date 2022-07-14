@@ -38,7 +38,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers
             var result = await _userManager.CreateAsync(user, request.In.Password);
             await _userManager.AddToRoleAsync(user, request.In.Role);
             //await _db.SaveChangesAsync();
-            return result  ;
+            return result;
         }
     }
 }

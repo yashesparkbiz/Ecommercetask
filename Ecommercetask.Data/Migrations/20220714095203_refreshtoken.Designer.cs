@@ -4,6 +4,7 @@ using Ecommercetask.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ecommercetask.Data.Migrations
 {
     [DbContext(typeof(EcommerceSiteContext))]
-    partial class EcommerceSiteContextModelSnapshot : ModelSnapshot
+    [Migration("20220714095203_refreshtoken")]
+    partial class refreshtoken
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -80,7 +82,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("User_Id");
 
-                    b.ToTable("Address", (string)null);
+                    b.ToTable("Address");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Discount", b =>
@@ -122,7 +124,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("Product_Id");
 
-                    b.ToTable("Discount", (string)null);
+                    b.ToTable("Discount");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Order", b =>
@@ -158,7 +160,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("User_Id");
 
-                    b.ToTable("Order", (string)null);
+                    b.ToTable("Order");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Order_Details", b =>
@@ -207,7 +209,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("Product_Id");
 
-                    b.ToTable("Order_Details", (string)null);
+                    b.ToTable("Order_Details");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product", b =>
@@ -273,7 +275,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("User_Id");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_cart", b =>
@@ -319,7 +321,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("User_Id");
 
-                    b.ToTable("Product_cart", (string)null);
+                    b.ToTable("Product_cart");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_category", b =>
@@ -350,7 +352,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Product_category", (string)null);
+                    b.ToTable("Product_category");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_subcategory", b =>
@@ -383,7 +385,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("Category_Id");
 
-                    b.ToTable("Product_subcategory", (string)null);
+                    b.ToTable("Product_subcategory");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.Product_wishlist", b =>
@@ -417,7 +419,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasIndex("User_Id");
 
-                    b.ToTable("Product_wishlist", (string)null);
+                    b.ToTable("Product_wishlist");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Data.User", b =>
@@ -468,7 +470,7 @@ namespace Ecommercetask.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", (string)null);
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("Ecommercetask.Data.Model.UserModel", b =>

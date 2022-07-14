@@ -10,11 +10,9 @@ using Ecommercetask.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Net.Http.Headers;
 
 namespace Ecommercetask.Controllers
 {
-    
     public class ProductController : AppApiController
     {
         public ProductController(ILogger<AppApiController> logger, IMediator mediator) : base(logger, mediator) {}
@@ -31,8 +29,7 @@ namespace Ecommercetask.Controllers
             return Ok(await _mediator.Send(new GetAllProductQuery(), ct));
         }
 
-        [HttpGet("get-products-byUserid/{User_Id}")]
-        //[Authorize(Roles = "Seller")]
+        [HttpGet("get-products-byUserid/{User_Id}"), Authorize(Roles = "Seller")]
         public async Task<IActionResult> GetProductsByUserId(int User_Id, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new GetProductsByUserIdQuery { User_Id = User_Id }, ct));
@@ -60,37 +57,6 @@ namespace Ecommercetask.Controllers
         public async Task<IActionResult> Update(ProductModel productModel, CancellationToken ct)
         {
             return Ok(await _mediator.Send(new UpdateProductCommand { productModel = productModel }, ct));
-        }
-
-        [HttpPost("upload-file"), DisableRequestSizeLimit]
-        public async Task<IActionResult> Upload(CancellationToken ct)
-        {
-            try
-            {
-                var formCollection = await Request.ReadFormAsync();
-                var file = formCollection.Files.First();
-                var folderName = Path.Combine("Resources", "Images");
-                var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
-                if (file.Length > 0)
-                {
-                    var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
-                    var fullPath = Path.Combine(pathToSave, fileName);
-                    var dbPath = Path.Combine(folderName, fileName);
-                    using (var stream = new FileStream(fullPath, FileMode.Create))
-                    {
-                        file.CopyTo(stream);
-                    }
-                    return Ok(new { dbPath });
-                }
-                else
-                {
-                    return BadRequest();
-                }
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, $"Internal server error: {ex}");
-            }
         }
     }
 }

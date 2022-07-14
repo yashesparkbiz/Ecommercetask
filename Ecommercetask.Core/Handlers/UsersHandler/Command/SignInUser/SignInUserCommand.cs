@@ -6,6 +6,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.ComponentModel.DataAnnotations;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
@@ -24,12 +25,14 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
         private readonly UserManager<UserModel> _userManager;
         //private readonly IMapper _mapper;
         private readonly JwtHandler _jwtHandler;
+        private readonly IConfiguration _configuration;
 
-        public SignInUserCommandHandler(UserManager<UserModel> userManager, JwtHandler jwtHandler)
+        public SignInUserCommandHandler(UserManager<UserModel> userManager, JwtHandler jwtHandler, IConfiguration configuration)
         {
             _userManager = userManager;
             //_mapper = mapper;
             _jwtHandler = jwtHandler;
+            _configuration = configuration;
         }
 
         public async Task<AuthResponseDto> Handle(SignInUserCommand request, CancellationToken cancellationToken)
@@ -45,7 +48,12 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
                 var claims = _jwtHandler.GetClaims(user, role);
                 var tokenOptions = _jwtHandler.GenerateTokenOptions(signingCredentials, claims);
                 var token = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
-                return new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = role };
+                var refreshToken = _jwtHandler.GenerateRefreshToken();
+                _ = int.TryParse(_configuration["JWT:RefreshTokenValidityInDays"], out int refreshTokenValidityInDays);
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpiryTime = DateTime.Now.AddDays(refreshTokenValidityInDays);
+                await _userManager.UpdateAsync(user);
+                return new AuthResponseDto { IsAuthSuccessful = true, Token = token, Role = role, RefreshToken = refreshToken };
             }
         }
     }
@@ -70,6 +78,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
         public string? ErrorMessage { get; set; }
         public string? Token { get; set; }
         public IList<string>? Role { get; set; }
+        public string? RefreshToken { get; set; }
     }
 
     public class JwtHandler
@@ -90,7 +99,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
             return new SigningCredentials(secret, SecurityAlgorithms.HmacSha256);
         }
 
-        public List<Claim> GetClaims(UserModel user, IList<string> role)
+        public  List<Claim> GetClaims(UserModel user, IList<string> role)
         {
             IdentityOptions _options = new IdentityOptions();
             var claims = new List<Claim>
@@ -111,6 +120,14 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
                 expires: DateTime.UtcNow.AddDays(1),
                 signingCredentials: signingCredentials);
             return tokenOptions;
+        }
+
+        public string GenerateRefreshToken()
+        {
+            var randomNumber = new byte[64];
+            using var rng = RandomNumberGenerator.Create();
+            rng.GetBytes(randomNumber);
+            return Convert.ToBase64String(randomNumber);
         }
     }
 }
