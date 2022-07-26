@@ -1,0 +1,62 @@
+ 2022-07-15 09:59:10,529
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-15 09:59:10,534
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-15 09:59:10,536
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-15 09:59:10,536
+ - MESSAGE: Hosting environment: Development
+  2022-07-15 09:59:10,536
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-15 10:00:03,577
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-15 10:00:03,955
+ - MESSAGE: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[created_at], [p].[is_active], [p].[name], [p].[updated_at]
+FROM [Product_category] AS [p]
+  2022-07-15 10:03:42,213
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-15 10:03:42,287
+ - MESSAGE: Executed DbCommand (19ms) [Parameters=[@__request_User_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [p].[id], [p].[brand], [p].[created_at], [p].[description], [p].[image], [p].[is_active], [p].[price], [p].[product_name], [p].[product_subcategory_id], [p].[quantity], [p].[updated_at], [p].[user_id]
+FROM [Product] AS [p]
+WHERE [p].[user_id] = @__request_User_Id_0
+  2022-07-15 10:03:44,173
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-15 10:03:44,224
+ - MESSAGE: Executed DbCommand (7ms) [Parameters=[@__request_user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o].[id], [p].[product_name], [o].[quantity], [o].[order_id], [o].[status], CAST([o].[quantity] AS decimal(10,3)) * [p].[price], [d].[value], [p].[product_subcategory_id]
+FROM [Order_Details] AS [o]
+INNER JOIN [Product] AS [p] ON [o].[product_id] = [p].[id]
+INNER JOIN [Discount] AS [d] ON [o].[discount_id] = [d].[id]
+WHERE [p].[user_id] = @__request_user_Id_0
+  2022-07-15 10:06:07,924
+ - MESSAGE: Entity Framework Core 6.0.5 initialized 'EcommerceSiteContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.5' with options: MigrationsAssembly=Ecommercetask.Data 
+  2022-07-15 10:06:07,930
+ - MESSAGE: Executed DbCommand (4ms) [Parameters=[@__request_user_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [o].[id], [p].[product_name], [o].[quantity], [o].[order_id], [o].[status], CAST([o].[quantity] AS decimal(10,3)) * [p].[price], [d].[value], [p].[product_subcategory_id]
+FROM [Order_Details] AS [o]
+INNER JOIN [Product] AS [p] ON [o].[product_id] = [p].[id]
+INNER JOIN [Discount] AS [d] ON [o].[discount_id] = [d].[id]
+WHERE [p].[user_id] = @__request_user_Id_0
+  2022-07-15 12:18:39,541
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-15 12:18:39,546
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-15 12:18:39,548
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-15 12:18:39,548
+ - MESSAGE: Hosting environment: Development
+  2022-07-15 12:18:39,548
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+  2022-07-15 16:31:52,039
+ - MESSAGE: Now listening on: https://localhost:7180
+  2022-07-15 16:31:52,044
+ - MESSAGE: Now listening on: http://localhost:5180
+  2022-07-15 16:31:52,046
+ - MESSAGE: Application started. Press Ctrl+C to shut down.
+  2022-07-15 16:31:52,046
+ - MESSAGE: Hosting environment: Development
+  2022-07-15 16:31:52,046
+ - MESSAGE: Content root path: C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\
+ 

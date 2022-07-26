@@ -1,6 +1,7 @@
 ﻿using Ecommercetask.Core.Handlers.ProductSubCategoryHandler.Queries.GetUserByRoleId;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.AddUsers;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.DeleteUsers;
+using Ecommercetask.Core.Handlers.UsersHandler.Command.ExternalLogin;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.RefreshToken;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.UpdateUsers;
@@ -100,6 +101,17 @@ namespace Ecommercetask.Controllers
             {
                 return Ok(tokenmodel);
             }
+        }
+
+        [HttpPost("ExternalLogin")]
+        public async Task<IActionResult> ExternalLogin([FromBody] ExternalLoginCommand command, CancellationToken ct)
+        {
+            var status = await _mediator.Send(command, ct);
+            if (status.Token == null)
+            {
+                return Unauthorized(status);
+            }
+            return Ok(status);
         }
     }
 }

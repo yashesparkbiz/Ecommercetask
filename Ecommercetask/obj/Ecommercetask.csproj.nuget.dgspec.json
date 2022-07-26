@@ -51,6 +51,10 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[10.0.1, )"
@@ -62,6 +66,10 @@
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.124.0, )"
             }
           },
           "imports": [
@@ -271,6 +279,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.57.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[10.0.1, )"
@@ -295,9 +307,17 @@
               "target": "Package",
               "version": "[6.1.0, )"
             },
+            "Microsoft.Owin.Security.Google": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[39.124.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

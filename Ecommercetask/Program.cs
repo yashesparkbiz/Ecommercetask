@@ -11,6 +11,10 @@ using System.Text;
 using Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Owin.Security.Google;
+using Stripe;
+using Microsoft.Extensions.DependencyInjection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.AddLog4Net();
@@ -42,11 +46,12 @@ builder.Services.AddSwaggerGen(options =>
     new string[] {}
     }
     });
-}); ;
+}); 
 
 builder.Services.AddDbContext<EcommerceSiteContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("default"), x => x.MigrationsAssembly("Ecommercetask.Data")));
 //builder.Services.Configure<IdentityOptions>(options => options.SignIn.RequireConfirmedAccount = false);
-builder.Services.AddIdentity<UserModel, IdentityRole<int>>().AddEntityFrameworkStores<EcommerceSiteContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<UserModel, IdentityRole<int>>(options => { 
+     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+/ ";}).AddEntityFrameworkStores<EcommerceSiteContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<JwtHandler>();
 //builder.Services.AddCors();
 builder.Services.AddAuthentication(opt =>
@@ -73,7 +78,12 @@ builder.Services.AddCors(options => {
         .AllowAnyMethod()
         .AllowAnyHeader().WithOrigins("http://localhost:4200", "http://localhost:5001", "http://localhost:54155"));
 });
-
+//builder.Services.AddAuthentication().AddGoogle("google", opt =>
+//    {
+//        var googleAuth = builder.Configuration.GetSection("GoogleAuthSettings");
+//        opt.ClientId = googleAuth["ClientId"];
+//        opt.SignInScheme = IdentityConstants.ExternalScheme;
+//    });
 builder.Services.Configure<FormOptions>(o =>
 {
     o.ValueLengthLimit = int.MaxValue;
@@ -82,6 +92,12 @@ builder.Services.Configure<FormOptions>(o =>
 });
 
 
+StripeConfiguration.ApiKey = "sk_test_51LNHCqSFSnmoK3QOEZjeayEIHNZFMCS0OQFq5ZPCShj07IULSCGC4AePrevsA0mGTrLa1YjSRCNWOtrO2v70gagH00Fvb2UsJP";
+builder.Services.Configure<StripeSetting>(o =>
+{
+    o.SecretKey = builder.Configuration["Stripe:SecretKey"]; 
+    o.PublishableKey = builder.Configuration["Stripe:PublishableKey"];
+});
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())

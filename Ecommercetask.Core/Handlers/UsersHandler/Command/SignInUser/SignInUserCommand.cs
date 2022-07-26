@@ -1,4 +1,5 @@
 ﻿using Ecommercetask.Data.Model;
+using Google.Apis.Auth;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
@@ -28,7 +29,7 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
         private readonly IConfiguration _configuration;
 
         public SignInUserCommandHandler(UserManager<UserModel> userManager, JwtHandler jwtHandler, IConfiguration configuration)
-        {
+        {   
             _userManager = userManager;
             //_mapper = mapper;
             _jwtHandler = jwtHandler;
@@ -81,15 +82,23 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
         public string? RefreshToken { get; set; }
     }
 
+    public class ExternalAuthDto
+    {
+        public string? Provider { get; set; }
+        public string? IdToken { get; set; }
+    }
+
     public class JwtHandler
     {
         private readonly IConfiguration _configuration;
         private readonly IConfigurationSection _jwtSettings;
+        private readonly IConfigurationSection _goolgeSettings;
 
         public JwtHandler(IConfiguration configuration)
         {
             _configuration = configuration;
             _jwtSettings = _configuration.GetSection("JwtSettings");
+            _goolgeSettings = _configuration.GetSection("GoogleAuthSettings");
         }
 
         public SigningCredentials GetSigningCredentials()
@@ -128,6 +137,24 @@ namespace Ecommercetask.Core.Handlers.UsersHandler.Command.SignInUser
             using var rng = RandomNumberGenerator.Create();
             rng.GetBytes(randomNumber);
             return Convert.ToBase64String(randomNumber);
+        }
+
+        public async Task<GoogleJsonWebSignature.Payload> VerifyGoogleToken(ExternalAuthDto externalAuth)
+        {
+            try
+            {
+                var settings = new GoogleJsonWebSignature.ValidationSettings()
+                {
+                    Audience = new List<string>() { _goolgeSettings.GetSection("clientId").Value }
+                };
+                var payload = await GoogleJsonWebSignature.ValidateAsync(externalAuth.IdToken, settings);
+                return payload;
+            }
+            catch (Exception ex)
+            {
+                //log an exception
+                return null;
+            }
         }
     }
 }

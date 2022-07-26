@@ -1,12 +1,12 @@
 ﻿using Ecommercetask.Core.Handlers.OrdersHandler.Command.AddOrders;
 using Ecommercetask.Core.Handlers.OrdersHandler.Command.DeleteOrders;
+using Ecommercetask.Core.Handlers.OrdersHandler.Command.StripePayment;
 using Ecommercetask.Core.Handlers.OrdersHandler.Command.UpdateOrders;
 using Ecommercetask.Core.Handlers.OrdersHandler.Queries.GetAllOrders;
 using Ecommercetask.Core.Handlers.OrdersHandler.Queries.GetOrdersById;
 using Ecommercetask.Data.Model;
 using Ecommercetask.Shared;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ecommercetask.Controllers
@@ -45,5 +45,11 @@ namespace Ecommercetask.Controllers
         {
             return Ok(await _mediator.Send(new UpdateOrdersCommand { ordersModel = ordersModel }, ct));
         }
+
+        [HttpPost("make-payment")]
+        public async Task<IActionResult> StripePayment([FromBody] StripeToken stripeToken, CancellationToken ct)
+        {
+            return Ok(await _mediator.Send(new StripePaymentCommand { stripeToken = stripeToken }, ct));
+        }   
     }
-}
+}   

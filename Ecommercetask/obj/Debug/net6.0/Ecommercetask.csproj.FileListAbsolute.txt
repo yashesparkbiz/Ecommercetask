@@ -244,6 +244,10 @@ C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Ecommercetask.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Ecommercetask.pdb
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Google.Apis.Core.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Humanizer.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\log4net.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\MediatR.dll
@@ -270,8 +274,10 @@ C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Microsoft.Owin.Security.Google.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Stripe.net.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\R5\Desktop\EcommerceBackup\Ecommercetask2\Ecommercetask\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
